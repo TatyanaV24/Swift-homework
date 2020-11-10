@@ -7,11 +7,30 @@
 
 import UIKit
 
+enum ColorPallete: Int {
+    case red = 0
+    case green = 1
+    case blue = 2
+    
+   var rgb: UIColor { // красный, зеленый, синий
+        
+    return UIColor.red; UIColor.green; UIColor.blue
+    }
+
+    var selectedDescription: String { //выбранное описание
+        return 
+    }
+
+    var name: String {
+        return self.selectedDescription
+    }
+}
+
 protocol NextDelegate {
-    func changeText(_text:String)
+    func changeText(_text:ColorPallete)
 }
 class NextTwoViewController: UIViewController {
-
+    
     var text = ""
     
     var delegate: NextDelegate?
@@ -21,21 +40,11 @@ class NextTwoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ChangeTextField.text = text
-        }
-    
-    @IBAction func greenButton() {
-        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
-        delegate?.changeText(_text: "Выбран \"зеленый цвет\"")
     }
     
-    @IBAction func blueButton() {
-        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
-        delegate?.changeText(_text: "Выбран \"синий цвет\"")
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        guard let color = ColorPallete(rawValue: sender.tag) else { return }
+        delegate?.changeText(_text: color)
+        dismiss(animated: true)
     }
-    
-    @IBAction func redButton() {
-        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
-        delegate?.changeText(_text: "Выбран \"красный цвет\"")
-    }
-    
 }
