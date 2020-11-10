@@ -13,7 +13,6 @@ class ItemThreeViewController: UIViewController {
         
         if let vc = segue.destination as? EmbedViewController, segue.identifier == "embedShow"{
             vc.delegate = self
-            
         }
     }
     
