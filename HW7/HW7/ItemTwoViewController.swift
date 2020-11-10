@@ -17,14 +17,14 @@ class ItemTwoViewController: UIViewController {
         changeLabel.text = colorText
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? NextTwoViewController, segue.identifier == "showNext"{
+        if let vc = segue.destination as? NextTwoViewController, segue.identifier == "showNext" {
             vc.text = changeLabel.text!
             vc.delegate = self
         }
     }
 }
 extension ItemTwoViewController: NextDelegate{
-    func changeText(_text:String){
-        changeLabel.text = "\(_text)"
+    func changeText(_text: ColorPallete){
+        changeLabel.text = "Выбран \(_text) цвет"
     }
 }
