@@ -7,24 +7,7 @@
 
 import UIKit
 
-enum ColorPallete: Int {
-    case red = 0
-    case green = 1
-    case blue = 2
-    
-   var rgb: UIColor { // красный, зеленый, синий
-        
-    return UIColor.red; UIColor.green; UIColor.blue
-    }
 
-    var selectedDescription: String { //выбранное описание
-        return 
-    }
-
-    var name: String {
-        return self.selectedDescription
-    }
-}
 
 protocol NextDelegate {
     func changeText(_text:ColorPallete)

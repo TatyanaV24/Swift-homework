@@ -23,8 +23,8 @@ class ItemTwoViewController: UIViewController {
         }
     }
 }
-extension ItemTwoViewController: NextDelegate{
-    func changeText(_text: ColorPallete){
-        changeLabel.text = "Выбран \(_text) цвет"
+extension ItemTwoViewController: NextDelegate {
+    func changeText(_text: ColorPallete) {
+        changeLabel.text = "Выбран \(_text.selectedDescription) цвет"
     }
 }
