@@ -9,29 +9,26 @@ import UIKit
 
 class ItemThreeViewController: UIViewController {
     
+    var subView: EmbedViewController?
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if let vc = segue.destination as? EmbedViewController, segue.identifier == "embedShow"{
-            vc.delegate = self
+            vc.supView = self
+            self.subView = vc
         }
     }
     
-    @IBAction func colorGreenButton() {
-        (children[0] as? EmbedViewController)?.view.backgroundColor = UIColor.green
-    }
-    
-    
-    @IBAction func colorYellowButton() {
-        (children[0] as? EmbedViewController)?.view.backgroundColor = UIColor.yellow
-    }
-    
-    @IBAction func colorPurpleButton() {
-        (children[0] as? EmbedViewController)?.view.backgroundColor = UIColor.purple
-    }
-}
-extension ItemThreeViewController: ColorDelegate {
-    func didPickColor(color: UIColor){
-        self.dismiss(animated: true, completion: nil)
-        self.view.backgroundColor = color
+    @IBAction func transitionButton(_ sender: UIButton) {
+        switch sender.tag {
+        case 6:
+            self.subView?.view.backgroundColor = UIColor.green
+        case 7:
+            self.subView?.view.backgroundColor = UIColor.yellow
+        case 8:
+            self.subView?.view.backgroundColor = UIColor.purple
+        default:
+            break
+        }
     }
 }
+
