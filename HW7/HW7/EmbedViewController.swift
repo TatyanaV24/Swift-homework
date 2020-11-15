@@ -7,23 +7,11 @@
 
 import UIKit
 
-protocol ColorDelegate {
-    func didPickColor(color: UIColor)
-}
-
 class EmbedViewController: UIViewController {
+    var supView: ItemThreeViewController?
     
-    var delegate: ColorDelegate?
-    
-    @IBAction func greenButton() {
-        self.delegate?.didPickColor(color: .green)
-    }
-    
-    @IBAction func yellowButton() {
-        self.delegate?.didPickColor(color: .yellow)
-    }
-    
-    @IBAction func purpleButton() {
-        self.delegate?.didPickColor(color: .purple)
+    @IBAction func changeBackground(_ sender: UIButton) {
+        guard let color = ColorPallete(rawValue: sender.tag) else { return }
+        self.supView?.view.backgroundColor = color.rgb
     }
 }
