@@ -1,5 +1,5 @@
 //
-//  ColorPalleteViewController.swift
+//  ColorPallete.swift
 //  HW7
 //
 //  Created by Татьяна Васильченко on 15.11.2020.

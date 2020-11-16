@@ -7,8 +7,6 @@
 
 import UIKit
 
-
-
 protocol NextDelegate {
     func changeText(_text:ColorPallete)
 }

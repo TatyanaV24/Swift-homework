@@ -13,13 +13,11 @@
 		BF66AA60255423460059945B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF66AA5E255423460059945B /* Main.storyboard */; };
 		BF66AA62255423480059945B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF66AA61255423480059945B /* Assets.xcassets */; };
 		BF66AA65255423480059945B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF66AA63255423480059945B /* LaunchScreen.storyboard */; };
-		BF66AA6E255428970059945B /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF66AA6D255428970059945B /* GreenViewController.swift */; };
-		BF66AA71255428A80059945B /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF66AA70255428A80059945B /* BlueViewController.swift */; };
-		BF66AA74255428B70059945B /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF66AA73255428B70059945B /* RedViewController.swift */; };
 		BF66AA7825542DF20059945B /* ItemTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF66AA7725542DF20059945B /* ItemTwoViewController.swift */; };
 		BF66AA7B25542E090059945B /* NextTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF66AA7A25542E090059945B /* NextTwoViewController.swift */; };
 		BF66AA7F255438D50059945B /* ItemThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF66AA7E255438D50059945B /* ItemThreeViewController.swift */; };
 		BF66AA82255438E30059945B /* EmbedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF66AA81255438E30059945B /* EmbedViewController.swift */; };
+		BFC2E0CF2561659700DA51B0 /* ColorPalleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC2E0CE2561659700DA51B0 /* ColorPalleteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,13 +29,11 @@
 		BF66AA61255423480059945B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF66AA64255423480059945B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF66AA66255423480059945B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF66AA6D255428970059945B /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
-		BF66AA70255428A80059945B /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
-		BF66AA73255428B70059945B /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
 		BF66AA7725542DF20059945B /* ItemTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTwoViewController.swift; sourceTree = "<group>"; };
 		BF66AA7A25542E090059945B /* NextTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextTwoViewController.swift; sourceTree = "<group>"; };
 		BF66AA7E255438D50059945B /* ItemThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemThreeViewController.swift; sourceTree = "<group>"; };
 		BF66AA81255438E30059945B /* EmbedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbedViewController.swift; sourceTree = "<group>"; };
+		BFC2E0CE2561659700DA51B0 /* ColorPalleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalleteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,10 +68,8 @@
 			children = (
 				BF66AA58255423460059945B /* AppDelegate.swift */,
 				BF66AA5A255423460059945B /* SceneDelegate.swift */,
+				BFC2E0CE2561659700DA51B0 /* ColorPalleteViewController.swift */,
 				BF66AA5C255423460059945B /* ViewController.swift */,
-				BF66AA6D255428970059945B /* GreenViewController.swift */,
-				BF66AA70255428A80059945B /* BlueViewController.swift */,
-				BF66AA73255428B70059945B /* RedViewController.swift */,
 				BF66AA7725542DF20059945B /* ItemTwoViewController.swift */,
 				BF66AA7A25542E090059945B /* NextTwoViewController.swift */,
 				BF66AA5E255423460059945B /* Main.storyboard */,
@@ -158,15 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF66AA6E255428970059945B /* GreenViewController.swift in Sources */,
 				BF66AA7F255438D50059945B /* ItemThreeViewController.swift in Sources */,
 				BF66AA5D255423460059945B /* ViewController.swift in Sources */,
 				BF66AA59255423460059945B /* AppDelegate.swift in Sources */,
 				BF66AA82255438E30059945B /* EmbedViewController.swift in Sources */,
 				BF66AA7825542DF20059945B /* ItemTwoViewController.swift in Sources */,
-				BF66AA71255428A80059945B /* BlueViewController.swift in Sources */,
-				BF66AA74255428B70059945B /* RedViewController.swift in Sources */,
 				BF66AA7B25542E090059945B /* NextTwoViewController.swift in Sources */,
+				BFC2E0CF2561659700DA51B0 /* ColorPalleteViewController.swift in Sources */,
 				BF66AA5B255423460059945B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

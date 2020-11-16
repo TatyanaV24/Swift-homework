@@ -19,16 +19,8 @@ class ItemThreeViewController: UIViewController {
     }
     
     @IBAction func transitionButton(_ sender: UIButton) {
-        switch sender.tag {
-        case 6:
-            self.subView?.view.backgroundColor = UIColor.green
-        case 7:
-            self.subView?.view.backgroundColor = UIColor.yellow
-        case 8:
-            self.subView?.view.backgroundColor = UIColor.purple
-        default:
-            break
-        }
+        guard let color = ColorPallete(rawValue: sender.tag) else { return }
+        self.subView?.view.backgroundColor = color.rgb
     }
 }
 
