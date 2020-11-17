@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+<<<<<<< Updated upstream
     
     var subdView: ViewController?
     
@@ -21,5 +22,14 @@ class ViewController: UIViewController {
         self.subdView?.view.backgroundColor = color.rgb
         dismiss(animated: true)
     }
+=======
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+
+>>>>>>> Stashed changes
 }
 
