@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< Updated upstream
 		BF66AA59255423460059945B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF66AA58255423460059945B /* AppDelegate.swift */; };
 		BF66AA5B255423460059945B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF66AA5A255423460059945B /* SceneDelegate.swift */; };
 		BF66AA5D255423460059945B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF66AA5C255423460059945B /* ViewController.swift */; };
@@ -39,29 +38,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		BF66AA52255423460059945B /* Frameworks */ = {
-=======
-		BF66AA3825541F7C0059945B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF66AA3725541F7C0059945B /* AppDelegate.swift */; };
-		BF66AA3A25541F7C0059945B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF66AA3925541F7C0059945B /* SceneDelegate.swift */; };
-		BF66AA3C25541F7C0059945B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF66AA3B25541F7C0059945B /* ViewController.swift */; };
-		BF66AA3F25541F7C0059945B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF66AA3D25541F7C0059945B /* Main.storyboard */; };
-		BF66AA4125541F7E0059945B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF66AA4025541F7E0059945B /* Assets.xcassets */; };
-		BF66AA4425541F7E0059945B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF66AA4225541F7E0059945B /* LaunchScreen.storyboard */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXFileReference section */
-		BF66AA3425541F7C0059945B /* HW7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW7.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF66AA3725541F7C0059945B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF66AA3925541F7C0059945B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BF66AA3B25541F7C0059945B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BF66AA3E25541F7C0059945B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BF66AA4025541F7E0059945B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BF66AA4325541F7E0059945B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BF66AA4525541F7E0059945B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		BF66AA3125541F7C0059945B /* Frameworks */ = {
->>>>>>> Stashed changes
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -71,7 +47,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-<<<<<<< Updated upstream
 		BF66AA4C255423460059945B = {
 			isa = PBXGroup;
 			children = (
@@ -84,25 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				BF66AA55255423460059945B /* HW7.app */,
-=======
-		BF66AA2B25541F7C0059945B = {
-			isa = PBXGroup;
-			children = (
-				BF66AA3625541F7C0059945B /* HW7 */,
-				BF66AA3525541F7C0059945B /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		BF66AA3525541F7C0059945B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BF66AA3425541F7C0059945B /* HW7.app */,
->>>>>>> Stashed changes
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-<<<<<<< Updated upstream
 		BF66AA57255423460059945B /* HW7 */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,18 +78,6 @@
 				BF66AA61255423480059945B /* Assets.xcassets */,
 				BF66AA63255423480059945B /* LaunchScreen.storyboard */,
 				BF66AA66255423480059945B /* Info.plist */,
-=======
-		BF66AA3625541F7C0059945B /* HW7 */ = {
-			isa = PBXGroup;
-			children = (
-				BF66AA3725541F7C0059945B /* AppDelegate.swift */,
-				BF66AA3925541F7C0059945B /* SceneDelegate.swift */,
-				BF66AA3B25541F7C0059945B /* ViewController.swift */,
-				BF66AA3D25541F7C0059945B /* Main.storyboard */,
-				BF66AA4025541F7E0059945B /* Assets.xcassets */,
-				BF66AA4225541F7E0059945B /* LaunchScreen.storyboard */,
-				BF66AA4525541F7E0059945B /* Info.plist */,
->>>>>>> Stashed changes
 			);
 			path = HW7;
 			sourceTree = "<group>";
@@ -137,7 +85,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-<<<<<<< Updated upstream
 		BF66AA54255423460059945B /* HW7 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF66AA69255423480059945B /* Build configuration list for PBXNativeTarget "HW7" */;
@@ -145,15 +92,6 @@
 				BF66AA51255423460059945B /* Sources */,
 				BF66AA52255423460059945B /* Frameworks */,
 				BF66AA53255423460059945B /* Resources */,
-=======
-		BF66AA3325541F7C0059945B /* HW7 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BF66AA4825541F7E0059945B /* Build configuration list for PBXNativeTarget "HW7" */;
-			buildPhases = (
-				BF66AA3025541F7C0059945B /* Sources */,
-				BF66AA3125541F7C0059945B /* Frameworks */,
-				BF66AA3225541F7C0059945B /* Resources */,
->>>>>>> Stashed changes
 			);
 			buildRules = (
 			);
@@ -161,40 +99,24 @@
 			);
 			name = HW7;
 			productName = HW7;
-<<<<<<< Updated upstream
 			productReference = BF66AA55255423460059945B /* HW7.app */;
-=======
-			productReference = BF66AA3425541F7C0059945B /* HW7.app */;
->>>>>>> Stashed changes
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-<<<<<<< Updated upstream
 		BF66AA4D255423460059945B /* Project object */ = {
-=======
-		BF66AA2C25541F7C0059945B /* Project object */ = {
->>>>>>> Stashed changes
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1210;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
-<<<<<<< Updated upstream
 					BF66AA54255423460059945B = {
-=======
-					BF66AA3325541F7C0059945B = {
->>>>>>> Stashed changes
 						CreatedOnToolsVersion = 12.1;
 					};
 				};
 			};
-<<<<<<< Updated upstream
 			buildConfigurationList = BF66AA50255423460059945B /* Build configuration list for PBXProject "HW7" */;
-=======
-			buildConfigurationList = BF66AA2F25541F7C0059945B /* Build configuration list for PBXProject "HW7" */;
->>>>>>> Stashed changes
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -202,27 +124,17 @@
 				en,
 				Base,
 			);
-<<<<<<< Updated upstream
 			mainGroup = BF66AA4C255423460059945B;
 			productRefGroup = BF66AA56255423460059945B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				BF66AA54255423460059945B /* HW7 */,
-=======
-			mainGroup = BF66AA2B25541F7C0059945B;
-			productRefGroup = BF66AA3525541F7C0059945B /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				BF66AA3325541F7C0059945B /* HW7 */,
->>>>>>> Stashed changes
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-<<<<<<< Updated upstream
 		BF66AA53255423460059945B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -230,22 +142,12 @@
 				BF66AA65255423480059945B /* LaunchScreen.storyboard in Resources */,
 				BF66AA62255423480059945B /* Assets.xcassets in Resources */,
 				BF66AA60255423460059945B /* Main.storyboard in Resources */,
-=======
-		BF66AA3225541F7C0059945B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BF66AA4425541F7E0059945B /* LaunchScreen.storyboard in Resources */,
-				BF66AA4125541F7E0059945B /* Assets.xcassets in Resources */,
-				BF66AA3F25541F7C0059945B /* Main.storyboard in Resources */,
->>>>>>> Stashed changes
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-<<<<<<< Updated upstream
 		BF66AA51255423460059945B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,47 +160,24 @@
 				BF66AA7B25542E090059945B /* NextTwoViewController.swift in Sources */,
 				BFC2E0CF2561659700DA51B0 /* ColorPalleteViewController.swift in Sources */,
 				BF66AA5B255423460059945B /* SceneDelegate.swift in Sources */,
-=======
-		BF66AA3025541F7C0059945B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BF66AA3C25541F7C0059945B /* ViewController.swift in Sources */,
-				BF66AA3825541F7C0059945B /* AppDelegate.swift in Sources */,
-				BF66AA3A25541F7C0059945B /* SceneDelegate.swift in Sources */,
->>>>>>> Stashed changes
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-<<<<<<< Updated upstream
 		BF66AA5E255423460059945B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BF66AA5F255423460059945B /* Base */,
-=======
-		BF66AA3D25541F7C0059945B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF66AA3E25541F7C0059945B /* Base */,
->>>>>>> Stashed changes
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-<<<<<<< Updated upstream
 		BF66AA63255423480059945B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BF66AA64255423480059945B /* Base */,
-=======
-		BF66AA4225541F7E0059945B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF66AA4325541F7E0059945B /* Base */,
->>>>>>> Stashed changes
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -306,11 +185,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-<<<<<<< Updated upstream
 		BF66AA67255423480059945B /* Debug */ = {
-=======
-		BF66AA4625541F7E0059945B /* Debug */ = {
->>>>>>> Stashed changes
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -371,11 +246,7 @@
 			};
 			name = Debug;
 		};
-<<<<<<< Updated upstream
 		BF66AA68255423480059945B /* Release */ = {
-=======
-		BF66AA4725541F7E0059945B /* Release */ = {
->>>>>>> Stashed changes
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -430,11 +301,7 @@
 			};
 			name = Release;
 		};
-<<<<<<< Updated upstream
 		BF66AA6A255423480059945B /* Debug */ = {
-=======
-		BF66AA4925541F7E0059945B /* Debug */ = {
->>>>>>> Stashed changes
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -453,11 +320,7 @@
 			};
 			name = Debug;
 		};
-<<<<<<< Updated upstream
 		BF66AA6B255423480059945B /* Release */ = {
-=======
-		BF66AA4A25541F7E0059945B /* Release */ = {
->>>>>>> Stashed changes
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -479,45 +342,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-<<<<<<< Updated upstream
 		BF66AA50255423460059945B /* Build configuration list for PBXProject "HW7" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF66AA67255423480059945B /* Debug */,
 				BF66AA68255423480059945B /* Release */,
-=======
-		BF66AA2F25541F7C0059945B /* Build configuration list for PBXProject "HW7" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BF66AA4625541F7E0059945B /* Debug */,
-				BF66AA4725541F7E0059945B /* Release */,
->>>>>>> Stashed changes
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-<<<<<<< Updated upstream
 		BF66AA69255423480059945B /* Build configuration list for PBXNativeTarget "HW7" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF66AA6A255423480059945B /* Debug */,
 				BF66AA6B255423480059945B /* Release */,
-=======
-		BF66AA4825541F7E0059945B /* Build configuration list for PBXNativeTarget "HW7" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BF66AA4925541F7E0059945B /* Debug */,
-				BF66AA4A25541F7E0059945B /* Release */,
->>>>>>> Stashed changes
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-<<<<<<< Updated upstream
 	rootObject = BF66AA4D255423460059945B /* Project object */;
-=======
-	rootObject = BF66AA2C25541F7C0059945B /* Project object */;
->>>>>>> Stashed changes
 }

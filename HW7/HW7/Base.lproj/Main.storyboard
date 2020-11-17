@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< Updated upstream
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SHT-WI-5ga">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
-=======
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
-    <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
->>>>>>> Stashed changes
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-<<<<<<< Updated upstream
         <!--Item 3-->
         <scene sceneID="4lK-qV-Gsd">
             <objects>
@@ -305,66 +297,11 @@
             <objects>
                 <tabBarController id="SHT-WI-5ga" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yga-zb-fQv">
-=======
-        <!--Item 2-->
-        <scene sceneID="Ih7-h8-0gR">
-            <objects>
-                <viewController id="uAX-qD-GXf" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vC6-De-fad">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="HjH-1Q-TEv"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="ZSO-qP-fyZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l1P-4W-CzR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="697" y="-67"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="rGR-fQ-P5Z">
-            <objects>
-                <viewController id="njG-uY-d5U" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KQT-D4-zut">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="tw3-dW-0k6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="64G-yg-f0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="709" y="650"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="PdU-J2-dtj">
-            <objects>
-                <viewController id="jxb-62-jOb" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Cr3-4P-Dmf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Dgc-iv-Hi3"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="e38-Rs-wOE"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OQh-Xx-FH4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="686" y="-781"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="AvP-Bn-8E3">
-            <objects>
-                <tabBarController id="DLX-ZL-fW4" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pmx-xE-fI1">
->>>>>>> Stashed changes
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-<<<<<<< Updated upstream
                         <segue destination="fDp-fM-deM" kind="relationship" relationship="viewControllers" id="Wuf-wV-jfk"/>
                         <segue destination="TKZ-I8-F1h" kind="relationship" relationship="viewControllers" id="wID-Jp-jUI"/>
                         <segue destination="Cqf-eU-wGy" kind="relationship" relationship="viewControllers" id="9yS-BP-bSE"/>
@@ -397,22 +334,10 @@
     <inferredMetricsTieBreakers>
         <segue reference="SOZ-kC-hcL"/>
     </inferredMetricsTieBreakers>
-=======
-                        <segue destination="jxb-62-jOb" kind="relationship" relationship="viewControllers" id="a1t-Zl-W56"/>
-                        <segue destination="uAX-qD-GXf" kind="relationship" relationship="viewControllers" id="UwP-UG-d6l"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6n5-r3-8jF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-369" y="-10"/>
-        </scene>
-    </scenes>
->>>>>>> Stashed changes
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-<<<<<<< Updated upstream
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -434,7 +359,5 @@
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-=======
->>>>>>> Stashed changes
     </resources>
 </document>
