@@ -13,6 +13,8 @@
 		BF2A5A6D2563F3DA0072D942 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2A5A6B2563F3DA0072D942 /* Main.storyboard */; };
 		BF2A5A6F2563F3DA0072D942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF2A5A6E2563F3DA0072D942 /* Assets.xcassets */; };
 		BF2A5A722563F3DA0072D942 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2A5A702563F3DA0072D942 /* LaunchScreen.storyboard */; };
+		BF2A5A7B2563F51A0072D942 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2A5A7A2563F51A0072D942 /* GalleryViewController.swift */; };
+		BF2A5A7E2563F5370072D942 /* SegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2A5A7D2563F5370072D942 /* SegmentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		BF2A5A6E2563F3DA0072D942 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF2A5A712563F3DA0072D942 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF2A5A732563F3DA0072D942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF2A5A7A2563F51A0072D942 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		BF2A5A7D2563F5370072D942 /* SegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				BF2A5A652563F3DA0072D942 /* AppDelegate.swift */,
 				BF2A5A672563F3DA0072D942 /* SceneDelegate.swift */,
 				BF2A5A692563F3DA0072D942 /* ViewController.swift */,
+				BF2A5A7A2563F51A0072D942 /* GalleryViewController.swift */,
+				BF2A5A7D2563F5370072D942 /* SegmentViewController.swift */,
 				BF2A5A6B2563F3DA0072D942 /* Main.storyboard */,
 				BF2A5A6E2563F3DA0072D942 /* Assets.xcassets */,
 				BF2A5A702563F3DA0072D942 /* LaunchScreen.storyboard */,
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF2A5A6A2563F3DA0072D942 /* ViewController.swift in Sources */,
+				BF2A5A7B2563F51A0072D942 /* GalleryViewController.swift in Sources */,
+				BF2A5A7E2563F5370072D942 /* SegmentViewController.swift in Sources */,
 				BF2A5A662563F3DA0072D942 /* AppDelegate.swift in Sources */,
 				BF2A5A682563F3DA0072D942 /* SceneDelegate.swift in Sources */,
 			);
