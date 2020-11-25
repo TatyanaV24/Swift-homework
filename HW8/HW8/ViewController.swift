@@ -14,28 +14,22 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var changeImageView: UIImageView!
     
-    @IBAction func imageCollectionButton(_ sender: UIButton) {
-        switch sender.tag {
-        // активация кнопки назад
-        case 0:
-            self.index = (self.index >= self.catsImage.count-1) ? 0 : self.index-1
+    @IBAction func previousButton(_ sender: UIButton) {
+        if index == 0 {
+            self.index = self.catsImage.count-1
             self.changeImageView.image = UIImage(named:catsImage[index])
-        // активация кнопки дальше
-        case 1:
-            self.index = (self.index >= self.catsImage.count-1) ? 0 : self.index+1
+        } else {
+            self.index = self.index-1
             self.changeImageView.image = UIImage(named:catsImage[index])
-        default:
-            self.changeImageView.image = UIImage(named: catsImage[5])
+        }
+    }
+    @IBAction func nextButton(_ sender: UIButton) {
+        if index == self.catsImage.count-1 {
+            self.index = 0
+            self.changeImageView.image = UIImage(named:catsImage[index])
+        } else {
+            self.index = self.index+1
+            self.changeImageView.image = UIImage(named:catsImage[index])
         }
     }
 }
-
-    
-   
-        
-  
-    
-
-
-
-
