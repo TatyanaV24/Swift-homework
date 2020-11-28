@@ -15,21 +15,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var changeImageView: UIImageView!
     
     @IBAction func previousButton(_ sender: UIButton) {
-        if index == 0 {
-            self.index = self.catsImage.count-1
-            self.changeImageView.image = UIImage(named:catsImage[index])
-        } else {
-            self.index = self.index-1
-            self.changeImageView.image = UIImage(named:catsImage[index])
-        }
+        self.index = self.index == 0 ? self.catsImage.count - 1 : self.index - 1
+        self.changeImageView.image = UIImage(named:catsImage[index])
     }
     @IBAction func nextButton(_ sender: UIButton) {
-        if index == self.catsImage.count-1 {
-            self.index = 0
-            self.changeImageView.image = UIImage(named:catsImage[index])
-        } else {
-            self.index = self.index+1
-            self.changeImageView.image = UIImage(named:catsImage[index])
-        }
+        self.index = self.index == self.catsImage.count-1 ? 0 : self.index + 1
+        self.changeImageView.image = UIImage(named:catsImage[index])
     }
 }

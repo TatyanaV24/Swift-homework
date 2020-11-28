@@ -48,7 +48,32 @@ class SegmentViewController: UIViewController {
         self.imageViewTwo.frame = CGRect(x: 218, y: 574, width: 158, height: 164)
         imageViewTwo.layer.cornerRadius = imageViewTwo.frame.size.width / 2
         imageViewTwo.clipsToBounds = true
+        //        enum View {
+        //            case view1:textFieldOne, textFieldTwo
+        //            case view2:imageViewOne, imageViewTwo
+        //            case view3:yesButton, noButton
+        //        }
+        //        var View = [view1,view2,view3] as [Any]
+        //
+        //        .view1.isHidden = false
+        //            .view2.isHidden = true
+        //            .view3.isHidden = true
+        //
+        
         view.addSubview(mySegmentControl)
+        self.view.addSubview(textFieldOne)
+        self.view.addSubview(textFieldTwo)
+        self.view.addSubview(yesButton)
+        self.view.addSubview(noButton)
+        self.view.addSubview(imageViewOne)
+        self.view.addSubview(imageViewTwo)
+        
+        textFieldOne.isHidden = true
+        textFieldTwo.isHidden = true
+        imageViewOne.isHidden = true
+        imageViewTwo.isHidden = true
+        yesButton.isHidden = true
+        noButton.isHidden = true
     }
     
     @objc func selectedValue(mySegmentControl: UISegmentedControl ) {
@@ -56,8 +81,6 @@ class SegmentViewController: UIViewController {
         case 0:
             //первый сегмент — зелёная view с двумя текстовыми полями;
             self.view.backgroundColor = UIColor.green
-            self.view.addSubview(textFieldOne)
-            self.view.addSubview(textFieldTwo)
             textFieldOne.isHidden = false
             textFieldTwo.isHidden = false
             imageViewOne.isHidden = true
@@ -67,19 +90,15 @@ class SegmentViewController: UIViewController {
         case 1:
             //второй сегмент — синяя view с двумя кнопками;
             self.view.backgroundColor = UIColor.blue
-            self.view.addSubview(yesButton)
-            self.view.addSubview(noButton)
             yesButton.isHidden = false
             noButton.isHidden = false
-            imageViewOne.isHidden = true
-            imageViewTwo.isHidden = true
             textFieldOne.isHidden = true
             textFieldTwo.isHidden = true
+            imageViewOne.isHidden = true
+            imageViewTwo.isHidden = true
         case 2:
             //третий сегмент — фиолетовая view с двумя картинками.
             self.view.backgroundColor = UIColor.systemIndigo
-            self.view.addSubview(imageViewOne)
-            self.view.addSubview(imageViewTwo)
             imageViewOne.isHidden = false
             imageViewTwo.isHidden = false
             textFieldOne.isHidden = true
