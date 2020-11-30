@@ -16,6 +16,9 @@ class SegmentViewController: UIViewController {
     var textFieldTwo = UITextField()
     var yesButton = UIButton()
     var noButton = UIButton()
+    let view1 = UIView()
+    let view2 = UIView()
+    let view3 = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,39 +44,26 @@ class SegmentViewController: UIViewController {
         noButton.setTitle("No", for: .normal)
         // создание двух картинок
         imageViewOne.image = UIImage(named: "9")
-        self.imageViewOne.frame = CGRect(x: 36, y: 574, width: 158, height: 164)
+        self.imageViewOne.frame = CGRect(x: 36, y: 274, width: 158, height: 164)
         imageViewOne.layer.cornerRadius = imageViewOne.frame.size.width / 2
         imageViewOne.clipsToBounds = true
         imageViewTwo.image = UIImage(named: "10")
-        self.imageViewTwo.frame = CGRect(x: 218, y: 574, width: 158, height: 164)
+        self.imageViewTwo.frame = CGRect(x: 218, y: 274, width: 158, height: 164)
         imageViewTwo.layer.cornerRadius = imageViewTwo.frame.size.width / 2
         imageViewTwo.clipsToBounds = true
-        //        enum View {
-        //            case view1:textFieldOne, textFieldTwo
-        //            case view2:imageViewOne, imageViewTwo
-        //            case view3:yesButton, noButton
-        //        }
-        //        var View = [view1,view2,view3] as [Any]
-        //
-        //        .view1.isHidden = false
-        //            .view2.isHidden = true
-        //            .view3.isHidden = true
-        //
-        
         view.addSubview(mySegmentControl)
-        self.view.addSubview(textFieldOne)
-        self.view.addSubview(textFieldTwo)
-        self.view.addSubview(yesButton)
-        self.view.addSubview(noButton)
-        self.view.addSubview(imageViewOne)
-        self.view.addSubview(imageViewTwo)
-        
-        textFieldOne.isHidden = true
-        textFieldTwo.isHidden = true
-        imageViewOne.isHidden = true
-        imageViewTwo.isHidden = true
-        yesButton.isHidden = true
-        noButton.isHidden = true
+        view1.addSubview(textFieldOne)
+        view1.addSubview(textFieldTwo)
+        view2.addSubview(yesButton)
+        view2.addSubview(noButton)
+        view3.addSubview(imageViewOne)
+        view3.addSubview(imageViewTwo)
+        view.addSubview(view1)
+        view.addSubview(view2)
+        view.addSubview(view3)
+        view1.isHidden = true
+        view2.isHidden = true
+        view3.isHidden = true
     }
     
     @objc func selectedValue(mySegmentControl: UISegmentedControl ) {
@@ -81,30 +71,21 @@ class SegmentViewController: UIViewController {
         case 0:
             //первый сегмент — зелёная view с двумя текстовыми полями;
             self.view.backgroundColor = UIColor.green
-            textFieldOne.isHidden = false
-            textFieldTwo.isHidden = false
-            imageViewOne.isHidden = true
-            imageViewTwo.isHidden = true
-            yesButton.isHidden = true
-            noButton.isHidden = true
+            view1.isHidden = false
+            view2.isHidden = true
+            view3.isHidden = true
         case 1:
             //второй сегмент — синяя view с двумя кнопками;
             self.view.backgroundColor = UIColor.blue
-            yesButton.isHidden = false
-            noButton.isHidden = false
-            textFieldOne.isHidden = true
-            textFieldTwo.isHidden = true
-            imageViewOne.isHidden = true
-            imageViewTwo.isHidden = true
+            view1.isHidden = true
+            view2.isHidden = false
+            view3.isHidden = true
         case 2:
             //третий сегмент — фиолетовая view с двумя картинками.
             self.view.backgroundColor = UIColor.systemIndigo
-            imageViewOne.isHidden = false
-            imageViewTwo.isHidden = false
-            textFieldOne.isHidden = true
-            textFieldTwo.isHidden = true
-            yesButton.isHidden = true
-            noButton.isHidden = true
+            view1.isHidden = true
+            view2.isHidden = true
+            view3.isHidden = false
         default:
             break
         }

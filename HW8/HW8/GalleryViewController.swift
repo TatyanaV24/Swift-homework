@@ -16,26 +16,22 @@ class GalleryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        for cat in cats {
-            let icon = cat.icon
-            let name = cat.name
-            var x = 20
-            var y = -250
-            for (index, image) in cats.enumerated() {
-                if index % 2 == 0 {
-                    x = 20
-                    y += 270
-                } else {
-                    x = 200
-                }
+        var x = 20
+        var y = -250
+        for (index, image) in cats.enumerated() {
+            if index % 2 == 0 {
+                x = 20
+                y += 300
+            } else {
+                x = 200
             }
+            let elArr = image
             let oneView = UIView(frame: CGRect(x: x, y: y, width: 174, height: 275))
             oneView.backgroundColor = UIColor.systemGray6
             let oneImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 174, height: 245))
             let oneLabel = UILabel(frame: CGRect(x: 0, y: 245, width: 174, height: 30))
-            oneImage.image = icon
-            oneLabel.text = name
+            oneImage.image = elArr.icon
+            oneLabel.text = elArr.name
             view.addSubview(oneView)
             oneView.addSubview(oneImage)
             oneView.addSubview(oneLabel)
