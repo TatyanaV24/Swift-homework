@@ -25,13 +25,12 @@ class GalleryViewController: UIViewController {
             } else {
                 x = 200
             }
-            let elArr = image
             let oneView = UIView(frame: CGRect(x: x, y: y, width: 174, height: 275))
             oneView.backgroundColor = UIColor.systemGray6
             let oneImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 174, height: 245))
             let oneLabel = UILabel(frame: CGRect(x: 0, y: 245, width: 174, height: 30))
-            oneImage.image = elArr.icon
-            oneLabel.text = elArr.name
+            oneImage.image = image.icon
+            oneLabel.text = image.name
             view.addSubview(oneView)
             oneView.addSubview(oneImage)
             oneView.addSubview(oneLabel)

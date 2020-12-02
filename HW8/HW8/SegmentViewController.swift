@@ -65,29 +65,10 @@ class SegmentViewController: UIViewController {
         view2.isHidden = true
         view3.isHidden = true
     }
-    
     @objc func selectedValue(mySegmentControl: UISegmentedControl ) {
-        switch mySegmentControl.selectedSegmentIndex {
-        case 0:
-            //первый сегмент — зелёная view с двумя текстовыми полями;
-            self.view.backgroundColor = UIColor.green
-            view1.isHidden = false
-            view2.isHidden = true
-            view3.isHidden = true
-        case 1:
-            //второй сегмент — синяя view с двумя кнопками;
-            self.view.backgroundColor = UIColor.blue
-            view1.isHidden = true
-            view2.isHidden = false
-            view3.isHidden = true
-        case 2:
-            //третий сегмент — фиолетовая view с двумя картинками.
-            self.view.backgroundColor = UIColor.systemIndigo
-            view1.isHidden = true
-            view2.isHidden = true
-            view3.isHidden = false
-        default:
-            break
+        for (index, view) in [view1, view2, view3].enumerated() {
+            view.isHidden = index != mySegmentControl.selectedSegmentIndex
         }
+        view.backgroundColor = mySegmentControl.selectedSegmentIndex == 0 ? UIColor.green : (mySegmentControl.selectedSegmentIndex == 1) ? UIColor.blue :  UIColor.systemIndigo
     }
 }
