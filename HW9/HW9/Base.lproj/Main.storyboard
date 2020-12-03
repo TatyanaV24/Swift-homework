@@ -138,33 +138,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="350" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" text="Сделайте так, чтобы в случае, если у обоих лейблов очень " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhA-Sx-bOs">
-                                <rect key="frame" x="8" y="299" width="170" height="61"/>
+                                <rect key="frame" x="8" y="299" width="175" height="61"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7H-PQ-NC9">
-                                <rect key="frame" x="186" y="299" width="220" height="142.5"/>
+                                <rect key="frame" x="191" y="299" width="215" height="142.5"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <string key="text">Сделайте так, чтобы в случае, если у обоих лейблов очень длинный текст, правый лейбл имел ширину 40 pt, а левый – все остальное пространство</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wrs-lV-Q1O">
-                                <rect key="frame" x="85" y="584" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cct-wd-p7k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bhA-Sx-bOs" firstAttribute="leading" secondItem="cct-wd-p7k" secondAttribute="leading" constant="8" id="Ay3-it-QC1"/>
                             <constraint firstItem="bhA-Sx-bOs" firstAttribute="top" secondItem="cct-wd-p7k" secondAttribute="top" constant="255" id="JRJ-wL-v8b"/>
-                            <constraint firstItem="E7H-PQ-NC9" firstAttribute="width" relation="greaterThanOrEqual" secondItem="bhA-Sx-bOs" secondAttribute="width" constant="40" id="PSt-DZ-xZd"/>
+                            <constraint firstItem="E7H-PQ-NC9" firstAttribute="width" secondItem="bhA-Sx-bOs" secondAttribute="width" constant="40" id="PSt-DZ-xZd"/>
                             <constraint firstItem="E7H-PQ-NC9" firstAttribute="top" secondItem="cct-wd-p7k" secondAttribute="top" constant="255" id="iGC-tv-enH"/>
                             <constraint firstItem="E7H-PQ-NC9" firstAttribute="top" secondItem="bhA-Sx-bOs" secondAttribute="top" id="lZB-ZX-kDa"/>
                             <constraint firstItem="cct-wd-p7k" firstAttribute="trailing" secondItem="E7H-PQ-NC9" secondAttribute="trailing" constant="8" id="nPZ-zZ-AC9"/>
