@@ -13,6 +13,7 @@
 		BF010C0225779D7100C9C9DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF010C0025779D7100C9C9DC /* Main.storyboard */; };
 		BF010C0425779D7400C9C9DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF010C0325779D7400C9C9DC /* Assets.xcassets */; };
 		BF010C0725779D7400C9C9DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF010C0525779D7400C9C9DC /* LaunchScreen.storyboard */; };
+		BF010C8E258013A300C9C9DC /* ItemFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF010C8D258013A300C9C9DC /* ItemFourViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BF010C0325779D7400C9C9DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF010C0625779D7400C9C9DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF010C0825779D7400C9C9DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF010C8D258013A300C9C9DC /* ItemFourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFourViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				BF010BFA25779D7100C9C9DC /* AppDelegate.swift */,
 				BF010BFC25779D7100C9C9DC /* SceneDelegate.swift */,
 				BF010BFE25779D7100C9C9DC /* ViewController.swift */,
+				BF010C8D258013A300C9C9DC /* ItemFourViewController.swift */,
 				BF010C0025779D7100C9C9DC /* Main.storyboard */,
 				BF010C0325779D7400C9C9DC /* Assets.xcassets */,
 				BF010C0525779D7400C9C9DC /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF010BFF25779D7100C9C9DC /* ViewController.swift in Sources */,
+				BF010C8E258013A300C9C9DC /* ItemFourViewController.swift in Sources */,
 				BF010BFB25779D7100C9C9DC /* AppDelegate.swift in Sources */,
 				BF010BFD25779D7100C9C9DC /* SceneDelegate.swift in Sources */,
 			);
