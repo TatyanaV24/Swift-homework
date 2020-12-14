@@ -140,21 +140,38 @@
                                     <action selector="hideButton:" destination="8Pu-pH-DtC" eventType="touchUpInside" id="AwG-SI-wx7"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мечты всегда сбываются. Надо верить и никогда не останавливаться - идти, бежать, падать, но не сдаваться." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7T-Wf-SQJ">
+                                <rect key="frame" x="104" y="352" width="206" height="31"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="XNt-aq-yRa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zID-fT-roh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sxh-Ea-Awa" firstAttribute="top" secondItem="zID-fT-roh" secondAttribute="top" constant="538" id="06p-JL-fTw"/>
+                            <constraint firstItem="c7T-Wf-SQJ" firstAttribute="leading" secondItem="zID-fT-roh" secondAttribute="leading" constant="104" id="0t6-kY-Ugu"/>
+                            <constraint firstItem="c7T-Wf-SQJ" firstAttribute="top" secondItem="zID-fT-roh" secondAttribute="top" constant="308" id="6Pi-1c-fNU"/>
                             <constraint firstItem="sxh-Ea-Awa" firstAttribute="leading" secondItem="zID-fT-roh" secondAttribute="leading" constant="150" id="Ehp-9k-usj"/>
                             <constraint firstItem="zID-fT-roh" firstAttribute="trailing" secondItem="sxh-Ea-Awa" secondAttribute="trailing" constant="150" id="hTc-gG-NN1"/>
+                            <constraint firstItem="zID-fT-roh" firstAttribute="trailing" secondItem="c7T-Wf-SQJ" secondAttribute="trailing" constant="104" id="zHD-7h-TjC"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 5" id="MaW-hR-Q0O"/>
+                    <connections>
+                        <outlet property="heightConstraint" destination="XNt-aq-yRa" id="bAX-Ry-lvs"/>
+                        <outlet property="myLabel" destination="c7T-Wf-SQJ" id="n6c-UW-pgo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ARv-3v-PwG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="OIQ-Sp-xze" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1728" y="-358"/>
+            <point key="canvasLocation" x="1727.536231884058" y="-358.25892857142856"/>
         </scene>
         <!--Item 4-->
         <scene sceneID="BOW-vl-fL6">
