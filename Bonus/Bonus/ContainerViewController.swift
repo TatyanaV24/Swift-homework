@@ -8,12 +8,9 @@
 import UIKit
 
 class ContainerViewController: UIViewController {
-    let controlPanel = UIToolbar()
-    let greenViewController = GreenViewController()
-    let yellowViewController = YellowViewController()
     
-    private var buttonsStackView: UIStackView
-    private var childVCStackView: UIStackView
+    private var buttonsStackView: UIStackView = UIStackView()
+    private var childVCStackView: UIStackView = UIStackView()
     
     private var childs: [UIViewController] = []
     private var placeholderVC: UIViewController?
@@ -21,43 +18,40 @@ class ContainerViewController: UIViewController {
     func addVC(_ vc: UIViewController, buttonTitle: String) {
         assert(childs.count < 6, "Too many child view controllers: only 6 allowed")
         // Сохраняем контроллер (но не показываем), создаем кнопку, показываем кнопку.
-        controlPanel.barStyle = .default
-        controlPanel.isTranslucent = true
-        controlPanel.backgroundColor = UIColor.gray
-        controlPanel.tintColor = UIColor.black
-        controlPanel.sizeToFit()
-        controlPanel.frame = CGRect(x: 0, y: 40, width: 414, height: 40)
-        let oneBarButton = UIBarButtonItem(title: "1", style: .done, target: self, action: #selector(showHideContentVC(sender:)))
-        let twoBarButton = UIBarButtonItem(title: "2", style: .done, target: self, action: #selector(showHideContentVC(sender:)))
-        let threeBarButton = UIBarButtonItem(title: "3", style: .done, target: self, action: #selector(showHideContentVC(sender:)))
-        oneBarButton.width = CGFloat(138)
-        twoBarButton.width = CGFloat(138)
-        threeBarButton.width = CGFloat(138)
-        controlPanel.setItems([oneBarButton, twoBarButton,threeBarButton], animated: false)
-        view.addSubview(controlPanel)
+        view.backgroundColor = UIColor.white
+        childs.append(GreenViewController())
+        childs.append(YellowViewController())
+        let oneButton = UIButton()
+        let twoButton = UIButton()
+        let threeButton = UIButton()
+        oneButton.frame = CGRect(x: 0, y: 40, width: 138, height: 40)
+        oneButton.backgroundColor = UIColor.gray
+        oneButton.setTitle("1",for: .normal)
+        oneButton.addTarget(self, action: #selector(showHideContentVC(sender:)), for: .valueChanged)
+        twoButton.frame = CGRect(x: 138, y: 40, width: 138, height: 40)
+        twoButton.backgroundColor = UIColor.gray
+        twoButton.setTitle("2",for: .normal)
+        twoButton.addTarget(self, action: #selector(showHideContentVC(sender:)), for: .valueChanged)
+        threeButton.frame = CGRect(x: 276, y: 40, width: 138, height: 40)
+        threeButton.backgroundColor = UIColor.gray
+        threeButton.setTitle("3",for: .normal)
+        threeButton.addTarget(self, action: #selector(showHideContentVC(sender:)), for: .valueChanged)
+        buttonsStackView.addArrangedSubview(oneButton)
+        buttonsStackView.addArrangedSubview(twoButton)
+        buttonsStackView.addArrangedSubview(threeButton)
+        view.addSubview(buttonsStackView)
     }
-    
     func setPlaceholder(_ vc: UIViewController) {
         // Сохраняем контроллер, который показывается в случае, если ни один контент контроллер не показан
+        placeholderVC = vc
     }
     
-    @objc private func showHideContentVC(sender: UIBarButtonItem) {
+    @objc private func showHideContentVC(sender: UIButton) {
         // Показываем или скрываем контент контроллер, который соответствует кнопке
         // Если все контент контроллеры скрыты, то показываем placeholder
-        switch sender.title {
-        case "1":
-            showChildVC(greenViewController)
-        //yellowViewController.hideChildVC()
-        case "2":
-            showChildVC(yellowViewController)
-        //            greenViewController.remove()
-        case "3":
-            showChildVC(greenViewController)
-            showChildVC(yellowViewController)
-        default:
-            view.backgroundColor = .gray
-        }
+        
     }
+    
     private func showChildVC(_ childVC: UIViewController) {
         // Функция для добавления контроллера в иерархию и его показа
         addChild(childVC)
@@ -72,4 +66,3 @@ class ContainerViewController: UIViewController {
         childVC.removeFromParent()
     }
 }
-
