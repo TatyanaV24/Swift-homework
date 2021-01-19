@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BF3F86CD25ACB26500B7DBD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF3F86CC25ACB26500B7DBD4 /* Assets.xcassets */; };
+		BF3F875225B6D95A00B7DBD4 /* SetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3F875125B6D95A00B7DBD4 /* SetTableViewCell.swift */; };
 		BF83F4132589FF9600B58C34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83F4122589FF9600B58C34 /* AppDelegate.swift */; };
 		BF83F4152589FF9600B58C34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83F4142589FF9600B58C34 /* SceneDelegate.swift */; };
 		BF83F4172589FF9600B58C34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83F4162589FF9600B58C34 /* ViewController.swift */; };
@@ -16,11 +17,11 @@
 		BF83F428258A02AA00B58C34 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83F427258A02AA00B58C34 /* GalleryCollectionViewCell.swift */; };
 		BF83F42D258A200100B58C34 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83F42C258A200100B58C34 /* Model.swift */; };
 		BF83F446258BAE1500B58C34 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83F445258BAE1500B58C34 /* TableViewController.swift */; };
-		BF83F449258CC63D00B58C34 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83F448258CC63D00B58C34 /* NameTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BF3F86CC25ACB26500B7DBD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF3F875125B6D95A00B7DBD4 /* SetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTableViewCell.swift; sourceTree = "<group>"; };
 		BF83F40F2589FF9600B58C34 /* HW10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF83F4122589FF9600B58C34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF83F4142589FF9600B58C34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +32,6 @@
 		BF83F427258A02AA00B58C34 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		BF83F42C258A200100B58C34 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		BF83F445258BAE1500B58C34 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		BF83F448258CC63D00B58C34 /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +69,8 @@
 				BF83F4142589FF9600B58C34 /* SceneDelegate.swift */,
 				BF83F42A258A1CEB00B58C34 /* Controller */,
 				BF83F4182589FF9600B58C34 /* Main.storyboard */,
-				BF83F448258CC63D00B58C34 /* NameTableViewCell.swift */,
 				BF83F445258BAE1500B58C34 /* TableViewController.swift */,
+				BF3F875125B6D95A00B7DBD4 /* SetTableViewCell.swift */,
 				BF83F427258A02AA00B58C34 /* GalleryCollectionViewCell.swift */,
 				BF83F41D2589FF9800B58C34 /* LaunchScreen.storyboard */,
 				BF83F4202589FF9800B58C34 /* Info.plist */,
@@ -165,9 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF3F875225B6D95A00B7DBD4 /* SetTableViewCell.swift in Sources */,
 				BF83F42D258A200100B58C34 /* Model.swift in Sources */,
 				BF83F446258BAE1500B58C34 /* TableViewController.swift in Sources */,
-				BF83F449258CC63D00B58C34 /* NameTableViewCell.swift in Sources */,
 				BF83F4172589FF9600B58C34 /* ViewController.swift in Sources */,
 				BF83F428258A02AA00B58C34 /* GalleryCollectionViewCell.swift in Sources */,
 				BF83F4132589FF9600B58C34 /* AppDelegate.swift in Sources */,

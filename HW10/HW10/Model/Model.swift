@@ -14,22 +14,3 @@ struct Menu {
     var name: String?
     var percent: String?
 }
-
-struct Table {
-    var iconImage: String?
-    var tuning: String?
-}
-
-struct FirstCell {
-    var iconImage: String?
-    var tuning: String?
-    }
-struct SecondCell {
-    var iconImage: String?
-    var tuning: String?
-    var content: String?
-}
-struct ThirdCell {
-    var iconImage: String?
-    var tuning: String?
-}

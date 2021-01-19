@@ -7,56 +7,63 @@
 
 import UIKit
 
-struct Content{
-    var number = ""
-    var names:[String] = []
-}
-
-class ContentTable {
-    var cellTable1 = FirstCell(iconImage: "1-1", tuning: "Авиарежим")
-    var cellTable2 = SecondCell(iconImage: "1-2", tuning: "WI-FI")
-    var cellTable3 = SecondCell(iconImage: "1-3", tuning: "Bluetooth")
-    var cellTable4 = ThirdCell(iconImage: "1-4", tuning: "Сотовая связь")
-    var cellTable5 = ThirdCell(iconImage: "1-5", tuning: "Режим модема")
-    var cellTable6 = ThirdCell(iconImage: "1-6", tuning: "Уведомления")
-    var cellTable7 = ThirdCell(iconImage: "1-7", tuning: "Звуки, тактильные сигналы")
-    var cellTable8 = ThirdCell(iconImage: "1-8", tuning: "Не беспокоить")
-    var cellTable9 = ThirdCell(iconImage: "1-9", tuning: "Экранное время")
-    var cellTable10 = ThirdCell(iconImage: "1-10", tuning: "Основаные")
-    var cellTable11 = ThirdCell(iconImage: "1-11", tuning: "Пункт управления")
-    var cellTable12 = ThirdCell(iconImage: "1-12", tuning: "Экран и яркость")
+struct Setting {
+    let title: String
+    let icon: UIImage?
+    let isSwitchHidden: Bool
     
-    static func contents() -> [Content]{
-        return [
-            Content(number: "", names: ["cellTable1","cellTable2","cellTable3","cellTable4","cellTable5"]),
-            Content(number: "", names: ["cellTable6","cellTable7","cellTable8","cellTable9"]),
-            Content(number: "", names: ["cellTable10","cellTable11","cellTable12","cellTable3","cellTable4"])
-        ]
+    init(title: String, icon: UIImage?, isSwitchHidden: Bool = true){
+        self.title = title
+        self.icon = icon
+        self.isSwitchHidden = isSwitchHidden
     }
 }
+struct SettingSection {
+    let title: String
+    let settings: [Setting]
+}
+class SettingsViewController: UIViewController {
+    let settingSections = [
+        SettingSection(
+            title: "1",
+            settings: [Setting(title: "Авиарежим", icon: UIImage(named: "1-1"), isSwitchHidden: true),
+                       Setting(title: "WI-FI", icon: UIImage(named: "1-2"), isSwitchHidden: false),
+                       Setting(title: "Bluetooth", icon: UIImage(named: "1-3"), isSwitchHidden: false),
+                       Setting(title: "Сотовая связь", icon: UIImage(named: "1-4"), isSwitchHidden: false),
+                       Setting(title: "Режим модема", icon: UIImage(named: "1-5"), isSwitchHidden: false)]),
+        SettingSection(
+            title: "2",
+            settings: [Setting(title: "Уведомления", icon: UIImage(named: "1-7"), isSwitchHidden: false),
+                       Setting(title: "Звуки, тактильные сигналы", icon: UIImage(named: "1-1"), isSwitchHidden: false),
+                       Setting(title: "Не беспокоить", icon: UIImage(named: "1-8"), isSwitchHidden: false),
+                       Setting(title: "Экранное время", icon: UIImage(named: "1-9"), isSwitchHidden: false)]),
+        SettingSection(
+            title: "3",
+            settings: [Setting(title: "Основаные", icon: UIImage(named: "1-10"), isSwitchHidden: false),
+                       Setting(title: "Пункт управления", icon: UIImage(named: "1-11"), isSwitchHidden: false),
+                       Setting(title: "Экран и яркость", icon: UIImage(named: "1-12"), isSwitchHidden: false)])]
+}
+
 class TableViewController: UIViewController {
-    var cont = ContentTable.contents()
-    @IBOutlet weak var myTableView: UITableView!
+    
+    var cont: SettingsViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 }
 extension TableViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return cont.count
+        return cont.settingSections.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cont[section].names.count
+        return cont.settingSections[section].settings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FirstCell") as! FirstTableViewCell
-        cell.firstCell = cont[indexPath.row]
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "setCell") as! SetTableViewCell
+        cell.nameLabel.text = cont.settingSections[indexPath.row].title
         return cell
     }
 }
