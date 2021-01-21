@@ -3,22 +3,38 @@
 //  Additional-tasks-for-module-8
 //
 //  Created by Татьяна Васильченко on 11.12.2020.
-//
+//  1. Для галереи картинок (пункт 2 про 10 картинок) добавить кнопку старт и стоп.
+//По нажатию на старт начинают проигрываться анимировано все картинки.
+//По нажатию на стоп останавливается.
+//Останавливать необходимо на той картинке, которая показывалась в момент нажатия на стоп (сложная задача).
+//Для решения поисследуйте документацию UIImageView на методы, которые могут помочь https://developer.apple.com/documentation/uikit/uiimageview
 
 import UIKit
 
 class ViewController: UIViewController {
     
-    var catsImage = [UIImage(named: "1")!, UIImage(named: "2")!,UIImage(named: "3")!, UIImage(named: "4")!, UIImage(named: "5")!, UIImage(named: "6")!, UIImage(named: "7")!, UIImage(named: "8")!, UIImage(named: "9")!, UIImage(named: "10")!]
+    var catsImage = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"].compactMap { UIImage(named: $0)}
+    var myTime = Timer()
+    var index = 0
     
     @IBOutlet weak var playImageView: UIImageView!
+    @IBOutlet weak var playButton: UIButton!
     
-    @IBAction func playButton(_ sender: UIButton) {
-        playImageView.animationImages = catsImage
-        playImageView.animationDuration = 3
-        playImageView.startAnimating()
+    @objc func createTimer(){
+        self.index = self.index == self.catsImage.count-1 ? 0 : self.index + 1
+        playImageView.image = catsImage[index]
     }
-    @IBAction func stopButton(_ sender: UIButton) {
-        playImageView.stopAnimating()
+    
+    @IBAction func actionForButton(_ sender: UIButton) {
+        if sender == playButton {
+            myTime = Timer.scheduledTimer(
+                timeInterval: 1,
+                target: self,
+                selector: #selector(createTimer),
+                userInfo: nil,
+                repeats: true)
+        } else {
+            self.myTime.invalidate()
+        }
     }
 }
