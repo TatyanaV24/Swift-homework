@@ -63,12 +63,6 @@ class ViewController: UIViewController {
         collectioView.dataSource = self
         collectioView.delegate = self
     }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "showTable" {
-//            if let vc = segue.destination as? TableViewController
-//        }
-//    }
-
 }
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
