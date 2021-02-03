@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF27952A25CB2DD900D1D3AD /* SomeScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF27952925CB2DD900D1D3AD /* SomeScrollViewController.swift */; };
 		BF3F86CD25ACB26500B7DBD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF3F86CC25ACB26500B7DBD4 /* Assets.xcassets */; };
 		BF3F875225B6D95A00B7DBD4 /* SetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3F875125B6D95A00B7DBD4 /* SetTableViewCell.swift */; };
 		BF83F4132589FF9600B58C34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83F4122589FF9600B58C34 /* AppDelegate.swift */; };
@@ -17,11 +18,10 @@
 		BF83F428258A02AA00B58C34 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83F427258A02AA00B58C34 /* GalleryCollectionViewCell.swift */; };
 		BF83F42D258A200100B58C34 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83F42C258A200100B58C34 /* Model.swift */; };
 		BF83F446258BAE1500B58C34 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83F445258BAE1500B58C34 /* TableViewController.swift */; };
-		BFBBC17F25BEB20E00180068 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBBC17E25BEB20E00180068 /* ScrollViewController.swift */; };
-		BFBBC18A25BF62A300180068 /* CatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBBC18925BF62A300180068 /* CatCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF27952925CB2DD900D1D3AD /* SomeScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeScrollViewController.swift; sourceTree = "<group>"; };
 		BF3F86CC25ACB26500B7DBD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF3F875125B6D95A00B7DBD4 /* SetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTableViewCell.swift; sourceTree = "<group>"; };
 		BF83F40F2589FF9600B58C34 /* HW10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW10.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,8 +34,6 @@
 		BF83F427258A02AA00B58C34 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		BF83F42C258A200100B58C34 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		BF83F445258BAE1500B58C34 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		BFBBC17E25BEB20E00180068 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
-		BFBBC18925BF62A300180068 /* CatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +71,7 @@
 				BF83F4142589FF9600B58C34 /* SceneDelegate.swift */,
 				BF83F42A258A1CEB00B58C34 /* Controller */,
 				BF83F4182589FF9600B58C34 /* Main.storyboard */,
-				BFBBC18925BF62A300180068 /* CatCollectionViewCell.swift */,
-				BFBBC17E25BEB20E00180068 /* ScrollViewController.swift */,
+				BF27952925CB2DD900D1D3AD /* SomeScrollViewController.swift */,
 				BF83F445258BAE1500B58C34 /* TableViewController.swift */,
 				BF3F875125B6D95A00B7DBD4 /* SetTableViewCell.swift */,
 				BF83F427258A02AA00B58C34 /* GalleryCollectionViewCell.swift */,
@@ -171,11 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFBBC18A25BF62A300180068 /* CatCollectionViewCell.swift in Sources */,
 				BF3F875225B6D95A00B7DBD4 /* SetTableViewCell.swift in Sources */,
 				BF83F42D258A200100B58C34 /* Model.swift in Sources */,
 				BF83F446258BAE1500B58C34 /* TableViewController.swift in Sources */,
-				BFBBC17F25BEB20E00180068 /* ScrollViewController.swift in Sources */,
+				BF27952A25CB2DD900D1D3AD /* SomeScrollViewController.swift in Sources */,
 				BF83F4172589FF9600B58C34 /* ViewController.swift in Sources */,
 				BF83F428258A02AA00B58C34 /* GalleryCollectionViewCell.swift in Sources */,
 				BF83F4132589FF9600B58C34 /* AppDelegate.swift in Sources */,
