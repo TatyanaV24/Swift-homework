@@ -10,6 +10,7 @@
 		BF27952A25CB2DD900D1D3AD /* SomeScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF27952925CB2DD900D1D3AD /* SomeScrollViewController.swift */; };
 		BF3F86CD25ACB26500B7DBD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF3F86CC25ACB26500B7DBD4 /* Assets.xcassets */; };
 		BF3F875225B6D95A00B7DBD4 /* SetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3F875125B6D95A00B7DBD4 /* SetTableViewCell.swift */; };
+		BF7F8C5C25D6C01E0055B761 /* BurgerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F8C5B25D6C01E0055B761 /* BurgerCollectionViewCell.swift */; };
 		BF83F4132589FF9600B58C34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83F4122589FF9600B58C34 /* AppDelegate.swift */; };
 		BF83F4152589FF9600B58C34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83F4142589FF9600B58C34 /* SceneDelegate.swift */; };
 		BF83F4172589FF9600B58C34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83F4162589FF9600B58C34 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 		BF27952925CB2DD900D1D3AD /* SomeScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeScrollViewController.swift; sourceTree = "<group>"; };
 		BF3F86CC25ACB26500B7DBD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF3F875125B6D95A00B7DBD4 /* SetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTableViewCell.swift; sourceTree = "<group>"; };
+		BF7F8C5B25D6C01E0055B761 /* BurgerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerCollectionViewCell.swift; sourceTree = "<group>"; };
 		BF83F40F2589FF9600B58C34 /* HW10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF83F4122589FF9600B58C34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF83F4142589FF9600B58C34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				BF83F4142589FF9600B58C34 /* SceneDelegate.swift */,
 				BF83F42A258A1CEB00B58C34 /* Controller */,
 				BF83F4182589FF9600B58C34 /* Main.storyboard */,
+				BF7F8C5B25D6C01E0055B761 /* BurgerCollectionViewCell.swift */,
 				BF27952925CB2DD900D1D3AD /* SomeScrollViewController.swift */,
 				BF83F445258BAE1500B58C34 /* TableViewController.swift */,
 				BF3F875125B6D95A00B7DBD4 /* SetTableViewCell.swift */,
@@ -170,6 +173,7 @@
 			files = (
 				BF3F875225B6D95A00B7DBD4 /* SetTableViewCell.swift in Sources */,
 				BF83F42D258A200100B58C34 /* Model.swift in Sources */,
+				BF7F8C5C25D6C01E0055B761 /* BurgerCollectionViewCell.swift in Sources */,
 				BF83F446258BAE1500B58C34 /* TableViewController.swift in Sources */,
 				BF27952A25CB2DD900D1D3AD /* SomeScrollViewController.swift in Sources */,
 				BF83F4172589FF9600B58C34 /* ViewController.swift in Sources */,

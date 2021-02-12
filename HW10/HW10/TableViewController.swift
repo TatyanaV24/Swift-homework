@@ -69,7 +69,7 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate {
         if indexPath.section == 0, indexPath.row == 0 {
             cell.accessoryType = .none
         } else {
-            cell.accessoryType = .disclosureIndicator
+            cell.accessoryType = name.accessoryType
         }
         return cell
     }

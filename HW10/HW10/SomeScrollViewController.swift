@@ -7,17 +7,20 @@
 
 import UIKit
 
-class SomeScrollViewController: UIViewController, UIScrollViewDelegate {
+class SomeScrollViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var allScroll: UIScrollView!
-    @IBOutlet weak var imgScroll: UIScrollView!
-    @IBOutlet weak var catImg: UIImageView!
+    @IBOutlet weak var burgCollection: UICollectionView!
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var takeAwayButton: UIButton!
+    var burImage = ["ап", "кф", "О'нил", "пб"].compactMap { UIImage(named: $0) }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        burgCollection.delegate = self
+        burgCollection.dataSource = self
         
         menuButton.layer.borderWidth = 2.0
         menuButton.layer.borderColor = UIColor.systemGreen.cgColor
@@ -26,25 +29,25 @@ class SomeScrollViewController: UIViewController, UIScrollViewDelegate {
         takeAwayButton.layer.borderColor = UIColor.systemGreen.cgColor
         takeAwayButton.layer.cornerRadius = 8.0
         createButton.layer.cornerRadius = 8.0
-        
-        let catSize = self.catImg.frame.size
-                
-        var imageViewRect = CGRect(x: 0, y: 0, width: catSize.width, height: catSize.height)
-        let oneImage = self.newImageViewWithImage(paramImage: UIImage(named: "1")!, paramFrame: imageViewRect)
-        imgScroll.addSubview(oneImage)
-        
-        imageViewRect.origin.x += imageViewRect.size.width
-        let twoImage = self.newImageViewWithImage(paramImage: UIImage(named: "2")!, paramFrame: imageViewRect)
-        imgScroll.addSubview(twoImage)
-        
-        imageViewRect.origin.x += imageViewRect.size.width
-        let threeImage = self.newImageViewWithImage(paramImage: UIImage(named: "3")!, paramFrame: imageViewRect)
-        imgScroll.addSubview(threeImage)
+ 
+}
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        burImage.count
     }
-    func newImageViewWithImage(paramImage: UIImage, paramFrame: CGRect) -> UIImageView {
-        let result = UIImageView(frame: paramFrame)
-        result.contentMode = .scaleAspectFit
-        result.image = paramImage
-        return result
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? BurgerCollectionViewCell {
+            cell.burger.image = burImage[indexPath.row]
+            return cell
+        }
+        return UICollectionViewCell()
     }
+}
+extension SomeScrollViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let size = burgCollection.frame.size
+        return CGSize(width: size.width, height: size.height)
+    }
+    
 }

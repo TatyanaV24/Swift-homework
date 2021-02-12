@@ -11,52 +11,16 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var collectioView: UICollectionView!
     
-    var itemMenuArray:[Menu] = {
-        var blankMenu = Menu()
-        blankMenu.imageName = "1"
-        blankMenu.price = "5 000 руб."
-        blankMenu.discount = "3 500 руб"
-        blankMenu.percent = "- 30 %"
-        blankMenu.name = "Котик Тимоха в желтой толстовке"
-        
-        var blankMenu2 = Menu()
-        blankMenu2.imageName = "2"
-        blankMenu2.discount = "6 500 руб"
-        blankMenu2.percent = "- 35 %"
-        blankMenu2.price = "4 300 руб."
-        blankMenu2.name = "Котик-сплюшка в колпаке"
-        
-        var blankMenu3 = Menu()
-        blankMenu3.imageName = "3"
-        blankMenu3.discount = "4 000 руб"
-        blankMenu3.percent = "- 50 %"
-        blankMenu3.price = "2 000 руб."
-        blankMenu3.name = "Зайчик в зеленом платье"
-        
-        var blankMenu4 = Menu()
-        blankMenu4.imageName = "4"
-        blankMenu4.discount = "6 500 руб"
-        blankMenu4.percent = "- 75 %"
-        blankMenu4.price = "1 700 руб."
-        blankMenu4.name = "Котик - комбинезон в полоску"
-        
-        var blankMenu5 = Menu()
-        blankMenu5.imageName = "5"
-        blankMenu5.discount = "6 500 руб"
-        blankMenu5.percent = "- 25 %"
-        blankMenu5.price = "4 800 руб."
-        blankMenu5.name = "Зайчик - платье в горошек"
-        
-        var blankMenu6 = Menu()
-        blankMenu6.imageName = "8"
-        blankMenu6.discount = "3 000 руб"
-        blankMenu6.percent = "- 50 %"
-        blankMenu6.price = "1 500 руб."
-        blankMenu6.name = "Котик малыш"
+    var itemMenu:[Menu] = {
+        var blankMenu = Menu(imageName: "1", price: "5 000 руб.", discount: "3 500 руб", name: "Котик Тимоха в желтой толстовке", percent: "- 30 %")
+        var blankMenu2 = Menu(imageName: "2", price: "4 300 руб.", discount: "6 500 руб", name: "Котик-сплюшка в колпаке", percent: "- 35 %")
+        var blankMenu3 = Menu(imageName: "3", price: "2 000 руб.", discount: "4 000 руб", name: "Зайчик в зеленом платье", percent: "- 50 %")
+        var blankMenu4 = Menu(imageName: "4", price: "1 700 руб.", discount: "6 500 руб", name: "Котик - комбинезон в полоску", percent: "- 75 %")
+        var blankMenu5 = Menu(imageName: "5", price: "4 800 руб.", discount: "6 500 руб", name: "Зайчик - платье в горошек", percent: "- 25 %")
+        var blankMenu6 = Menu(imageName: "8", price: "1 500 руб.", discount: "3 000 руб", name: "Котик малыш", percent: "- 50 %")
         
         return [blankMenu, blankMenu2, blankMenu3, blankMenu4, blankMenu5, blankMenu6]
     }()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,12 +35,12 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
         return CGSize(width: w, height: w)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return itemMenuArray.count
+        return itemMenu.count
         
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let itemCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryCell", for: indexPath) as? GalleryCollectionViewCell {
-            itemCell.menu = itemMenuArray[indexPath.row]
+            itemCell.menu = itemMenu[indexPath.row]
            
             return itemCell
         }
