@@ -135,6 +135,7 @@
         <!--5-->
         <scene sceneID="lCE-ZR-ruG">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rL1-Lu-Xgr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="On1-bw-vSb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="scL-sH-Ytw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -172,7 +173,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="5" id="KrW-wg-IT8"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rL1-Lu-Xgr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="637.68115942028987" y="202.90178571428569"/>
         </scene>
