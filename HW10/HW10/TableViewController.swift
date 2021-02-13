@@ -46,7 +46,7 @@ class TableViewController: UIViewController {
             settings: [Setting(title: "Основаные", icon: UIImage(named: "1-10"), isSwitchHidden: true, accessoryType:.detailDisclosureButton),
                        Setting(title: "Пункт управления", icon: UIImage(named: "1-11"), isSwitchHidden: true, accessoryType:.disclosureIndicator),
                        Setting(title: "Экран и яркость", icon: UIImage(named: "1-12"), isSwitchHidden: true, accessoryType:.disclosureIndicator)])]
-
+    
 }
 extension TableViewController: UITableViewDataSource, UITableViewDelegate {
     
@@ -66,11 +66,7 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate {
         cell.nameLabel.text = name.title
         cell.iconImage.image = name.icon
         cell.switchButton.isHidden = name.isSwitchHidden
-        if indexPath.section == 0, indexPath.row == 0 {
-            cell.accessoryType = .none
-        } else {
-            cell.accessoryType = name.accessoryType
-        }
+        cell.accessoryType = name.accessoryType
         return cell
     }
 }
