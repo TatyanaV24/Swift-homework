@@ -16,6 +16,13 @@ class ViewController: UIViewController {
     var catsImage = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"].compactMap { UIImage(named: $0)}
     var myTime = Timer()
     var index = 0
+    var currentIndex = 0 {
+        didSet {
+            if oldValue != currentIndex {
+                currentIndexUpdated()
+            }
+        }
+    }
     
     @IBOutlet weak var playImageView: UIImageView!
     @IBOutlet weak var playButton: UIButton!
@@ -61,9 +68,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func actionSlider(_ sender: UISlider) {
-        if index != Int(round(sender.value)) {
-            changeCatsImage()
-        }
+       currentIndex = Int(round(sender.value)) 
+    }
+    func currentIndexUpdated() {
+        guard 0..<catsImage.count ~= currentIndex else { return }
+        playImageView.image = catsImage[currentIndex]
     }
     
     @IBAction func myStepper(_ sender: UIStepper) {
