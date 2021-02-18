@@ -19,27 +19,13 @@ class CalendarViewController: UIViewController {
         
         let pickerDate = sender.date
         let calendar = Calendar.current
-        let year = calendar.component(.year, from: pickerDate)
-        let month = calendar.component(.month, from: pickerDate)
-        let day = calendar.component(.day, from: pickerDate)
-        let hour = calendar.component(.hour, from: pickerDate)
-        let minute = calendar.component(.minute, from: pickerDate)
-        let second = calendar.component(.second, from: pickerDate)
         
-        if newTimeTextField.text?.isEmpty == true {
-            guard let endDate = calendar.date(byAdding: .day, value: 0, to: pickerDate) else { return }
-            
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "dd-MM-yyyy"// 'Time' HH:mm:ss"
-            dateLabel.text = dateFormatter.string(from: endDate)
-            
-        }else {
-            let el = Int(newTimeTextField.text!)
-            if timeZone.contains(el!){
-                let newHour = hour + el!
-                dateLabel.text = "\(day)-\(month)-\(year) Time \(newHour):\(minute):\(second)"
-                
-            }
-        }
+        let timezoneValue = Int(newTimeTextField.text ?? "") ?? 0
+        let endDate = calendar.date(byAdding: .hour, value: timezoneValue, to: pickerDate)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy 'Time' HH:mm:ss"
+        dateLabel.text = dateFormatter.string(from: endDate!)
+        
     }
 }
