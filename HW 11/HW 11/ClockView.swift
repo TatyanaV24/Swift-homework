@@ -43,12 +43,7 @@ class ClockView: UIView {
     @IBInspectable var secondLineColor: UIColor = UIColor.blue{
         didSet {secondLine.backgroundColor = secondLineColor}
     }
-    
-    var roundedViewColor = UIColor.green {
-        didSet {
-            roundedView.backgroundColor = roundedViewColor
-        }
-    }
+    var roundedViewColor: UIColor = UIColor.systemBlue
     
     @IBInspectable var hours: CGFloat = 12
     @IBInspectable var minute: CGFloat = 45
@@ -59,14 +54,15 @@ class ClockView: UIView {
     private let rightMarker = UIView()
     private let bottomMarker = UIView()
     
+    
     private let hourLine = UIView()
     private let minuteLine = UIView()
     private let secondLine = UIView()
     private let roundedView = UIView()
     
-    
     override func layoutSubviews() {
         super.layoutSubviews()
+        
         layer.cornerRadius = frame.size.width / 2
         hourLine.layer.anchorPoint = CGPoint(x: 0.5, y: 1)
         minuteLine.layer.anchorPoint = CGPoint(x: 0.5, y: 1)
@@ -81,17 +77,16 @@ class ClockView: UIView {
         bottomMarker.frame = CGRect(x: w / 2 - markerSize / 2, y: h - markerLength, width: markerSize, height: markerLength)
         
         hourLine.frame = CGRect(x: w / 2 - hourLineSize / 2, y: hourLineOffset, width: hourLineSize, height: h/2 - hourLineOffset)
-        
         minuteLine.frame = CGRect(x: w / 2 - minuteLineSize / 2, y: minuteLineOffset, width: minuteLineSize, height: h/2 - minuteLineOffset)
-        
         secondLine.frame = CGRect(x: w / 2 - secondLineSize / 2, y: secondLineOffset, width: secondLineSize, height: h/2 - secondLineOffset)
         
         roundedView.frame = CGRect(x: w / 2 - 8, y: h / 2 - 8, width: 16, height: 16)
         roundedView.layer.cornerRadius = 8
+        roundedView.backgroundColor = roundedViewColor
         
         updateHours()
         
-        for v in [topMarker, leftMarker, rightMarker, bottomMarker, hourLine, minuteLine, secondLine, roundedView] {
+        for v in [topMarker, leftMarker, rightMarker, bottomMarker, hourLine, minuteLine, secondLine, roundedView ] {
             addSubview(v)
         }
     }

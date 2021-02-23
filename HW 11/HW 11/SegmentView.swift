@@ -13,7 +13,7 @@ protocol SegmentViewDelegate {
 
 @IBDesignable
 class SegmentView: UIView {
-   
+    
     var buttons = [UIButton]()
     var buttonTitles:[String]!
     var delegate: SegmentViewDelegate?
@@ -33,12 +33,16 @@ class SegmentView: UIView {
         }
     }
     @IBInspectable
-    var commaSeparatedButtonTitles: String = ""
+    var commaSeparatedButtonTitles: String = "1,2" {
+        didSet {
+            updateSegments()
+        }
+    }
     
     @IBInspectable
     var textColor: UIColor = .lightGray {
         didSet {
-            createButton()
+            updateSegments()
         }
     }
     
@@ -55,22 +59,49 @@ class SegmentView: UIView {
     var selectorTextColor: UIColor = .white
     
     override init(frame: CGRect) {
-           super.init(frame: frame)
-           
-        addSubview(selector)
-       }
+        super.init(frame: frame)
+        updateSegments()
+    }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
+    func updateSegments() {
+        buttons.removeAll()
+        subviews.forEach { $0.removeFromSuperview() }
+        
+        buttonTitles = commaSeparatedButtonTitles.components(separatedBy: ",")
+        
+        for buttonTitle in buttonTitles {
+            let button = UIButton(type: .system)
+            button.setTitle(buttonTitle, for: .normal)
+            button.setTitleColor(textColor, for: .normal)
+            button.addTarget(self, action: #selector(buttonTapped(button:)), for: .touchUpInside)
+            buttons.append(button)
+        }
+        buttons[0].setTitleColor(selectorTextColor, for: .normal)
+        addSubview(selector)
+        
+        sv = UIStackView(arrangedSubviews: buttons)
+        sv.axis = .horizontal
+        sv.alignment = .fill
+        sv.distribution = .fillProportionally
+        addSubview(sv)
+    }
+    
     override func layoutSubviews() {
         layer.cornerRadius = frame.height / 2
         let selectorWidth = frame.width / CGFloat( buttonTitles.count)
-        selector = UIView(frame: CGRect(x: 0, y: 0, width: selectorWidth, height: frame.height))
+        selector.frame = CGRect(x: 0, y: 0, width: selectorWidth, height: frame.height)
         selector.layer.cornerRadius = frame.height / 2
-        updateView()
-        
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            sv.topAnchor.constraint(equalTo: self.topAnchor),
+            sv.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            sv.leftAnchor.constraint(equalTo: self.leftAnchor),
+            sv.rightAnchor.constraint(equalTo: self.rightAnchor)
+        ])
     }
     
     @objc func buttonTapped(button: UIButton) {
@@ -87,40 +118,5 @@ class SegmentView: UIView {
                 btn.setTitleColor(selectorTextColor, for: .normal)
             }
         }
-    }
-}
-extension SegmentView {
-    func updateView() {
-        createButton()
-        configStackView()
-    }
-    private func configStackView() {
-        sv = UIStackView(arrangedSubviews: buttons)
-        sv.axis = .horizontal
-        sv.alignment = .fill
-        sv.distribution = .fillProportionally
-        addSubview(sv)
-        NSLayoutConstraint.activate([
-                    sv.topAnchor.constraint(equalTo: self.topAnchor),
-                    sv.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-                    sv.leftAnchor.constraint(equalTo: self.leftAnchor),
-                    sv.rightAnchor.constraint(equalTo: self.rightAnchor)
-                ])
-    }
-    
-    private func createButton() {
-        buttons.removeAll()
-        subviews.forEach { $0.removeFromSuperview() }
-        
-        buttonTitles = commaSeparatedButtonTitles.components(separatedBy: ",")
-        
-        for buttonTitle in buttonTitles {
-            let button = UIButton(type: .system)
-            button.setTitle(buttonTitle, for: .normal)
-            button.setTitleColor(textColor, for: .normal)
-            button.addTarget(self, action: #selector(buttonTapped(button:)), for: .touchUpInside)
-            buttons.append(button)
-        }
-        buttons[0].setTitleColor(selectorTextColor, for: .normal)
     }
 }
