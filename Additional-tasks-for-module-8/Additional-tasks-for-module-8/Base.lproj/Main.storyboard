@@ -145,16 +145,19 @@
                                 <rect key="frame" x="28" y="40" width="319" height="216"/>
                                 <locale key="locale" localeIdentifier="ru"/>
                                 <connections>
-                                    <action selector="changeLabel:" destination="On1-bw-vSb" eventType="valueChanged" id="jAm-IE-LMP"/>
+                                    <action selector="changeLabel" destination="On1-bw-vSb" eventType="valueChanged" id="AXg-UA-YAL"/>
                                 </connections>
                             </datePicker>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SIv-oA-JO6">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SIv-oA-JO6">
                                 <rect key="frame" x="112" y="324" width="151" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="changeLabel" destination="On1-bw-vSb" eventType="editingChanged" id="DQq-FM-fRX"/>
+                                </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3P-nt-nuZ">
-                                <rect key="frame" x="112" y="378" width="151" height="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3P-nt-nuZ">
+                                <rect key="frame" x="112" y="378" width="151" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
