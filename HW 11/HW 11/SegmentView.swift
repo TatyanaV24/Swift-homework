@@ -42,7 +42,9 @@ class SegmentView: UIView {
     @IBInspectable
     var textColor: UIColor = .lightGray {
         didSet {
-            updateSegments()
+            buttons.forEach {
+                $0.setTitleColor(textColor, for: .normal)
+            }
         }
     }
     
@@ -56,7 +58,13 @@ class SegmentView: UIView {
     }
     
     @IBInspectable
-    var selectorTextColor: UIColor = .white
+    var selectorTextColor: UIColor = .white{
+        didSet {
+            buttons.forEach {
+                $0.setTitleColor(selectorTextColor, for: .selected)
+            }
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -77,6 +85,7 @@ class SegmentView: UIView {
             let button = UIButton(type: .system)
             button.setTitle(buttonTitle, for: .normal)
             button.setTitleColor(textColor, for: .normal)
+            button.setTitleColor(selectorTextColor, for: .selected)
             button.addTarget(self, action: #selector(buttonTapped(button:)), for: .touchUpInside)
             buttons.append(button)
         }
@@ -91,23 +100,19 @@ class SegmentView: UIView {
     }
     
     override func layoutSubviews() {
+        super.layoutSubviews()
+        
         layer.cornerRadius = frame.height / 2
+        
         let selectorWidth = frame.width / CGFloat( buttonTitles.count)
         selector.frame = CGRect(x: 0, y: 0, width: selectorWidth, height: frame.height)
         selector.layer.cornerRadius = frame.height / 2
-        sv.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            sv.topAnchor.constraint(equalTo: self.topAnchor),
-            sv.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            sv.leftAnchor.constraint(equalTo: self.leftAnchor),
-            sv.rightAnchor.constraint(equalTo: self.rightAnchor)
-        ])
+        
+        sv.frame = bounds
     }
     
     @objc func buttonTapped(button: UIButton) {
         for (buttonIndex,btn) in buttons.enumerated() {
-            btn.setTitleColor(textColor, for: .normal)
-            
             if btn == button {
                 let selectorStartPosition = frame.width / CGFloat(buttons.count) * CGFloat(buttonIndex)
                 selectedIndex = buttonIndex
@@ -115,7 +120,9 @@ class SegmentView: UIView {
                 UIView.animate(withDuration: 0.3, animations: {
                     self.selector.frame.origin.x = selectorStartPosition
                 })
-                btn.setTitleColor(selectorTextColor, for: .normal)
+                button.isSelected = true
+            } else {
+                btn.isSelected = false
             }
         }
     }

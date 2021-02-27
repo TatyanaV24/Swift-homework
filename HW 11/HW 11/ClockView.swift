@@ -60,6 +60,20 @@ class ClockView: UIView {
     private let secondLine = UIView()
     private let roundedView = UIView()
     
+    func updateHours(){
+        let angleHour = CGFloat.pi * 2 * (hours / CGFloat(12))
+        hourLine.transform = CGAffineTransform(rotationAngle: angleHour)
+        
+        let angleMinute = CGFloat.pi * 2 * (minute / CGFloat(60))
+        minuteLine.transform = CGAffineTransform(rotationAngle: angleMinute)
+        
+        let angleSecond = CGFloat.pi * 2 * (second / CGFloat(60))
+        secondLine.transform = CGAffineTransform(rotationAngle: angleSecond)
+        
+        for v in [topMarker, leftMarker, rightMarker, bottomMarker, hourLine, minuteLine, secondLine, roundedView ] {
+            addSubview(v)
+        }
+    }
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -83,22 +97,6 @@ class ClockView: UIView {
         roundedView.frame = CGRect(x: w / 2 - 8, y: h / 2 - 8, width: 16, height: 16)
         roundedView.layer.cornerRadius = 8
         roundedView.backgroundColor = roundedViewColor
-        
         updateHours()
-        
-        for v in [topMarker, leftMarker, rightMarker, bottomMarker, hourLine, minuteLine, secondLine, roundedView ] {
-            addSubview(v)
-        }
-    }
-    
-    func updateHours(){
-        let angleHour = CGFloat.pi * 2 * (hours / CGFloat(12))
-        hourLine.transform = CGAffineTransform(rotationAngle: angleHour)
-        
-        let angleMinute = CGFloat.pi * 2 * (minute / CGFloat(60))
-        minuteLine.transform = CGAffineTransform(rotationAngle: angleMinute)
-        
-        let angleSecond = CGFloat.pi * 2 * (second / CGFloat(60))
-        secondLine.transform = CGAffineTransform(rotationAngle: angleSecond)
     }
 }
