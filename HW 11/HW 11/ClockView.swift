@@ -60,23 +60,7 @@ class ClockView: UIView {
     private let secondLine = UIView()
     private let roundedView = UIView()
     
-    func updateHours(){
-        let angleHour = CGFloat.pi * 2 * (hours / CGFloat(12))
-        hourLine.transform = CGAffineTransform(rotationAngle: angleHour)
-        
-        let angleMinute = CGFloat.pi * 2 * (minute / CGFloat(60))
-        minuteLine.transform = CGAffineTransform(rotationAngle: angleMinute)
-        
-        let angleSecond = CGFloat.pi * 2 * (second / CGFloat(60))
-        secondLine.transform = CGAffineTransform(rotationAngle: angleSecond)
-        
-        for v in [topMarker, leftMarker, rightMarker, bottomMarker, hourLine, minuteLine, secondLine, roundedView ] {
-            addSubview(v)
-        }
-    }
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
+    func updateViews() {
         layer.cornerRadius = frame.size.width / 2
         hourLine.layer.anchorPoint = CGPoint(x: 0.5, y: 1)
         minuteLine.layer.anchorPoint = CGPoint(x: 0.5, y: 1)
@@ -98,5 +82,29 @@ class ClockView: UIView {
         roundedView.layer.cornerRadius = 8
         roundedView.backgroundColor = roundedViewColor
         updateHours()
+    }
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        updateViews()
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        updateViews()
+    }
+    
+    func updateHours(){
+        let angleHour = CGFloat.pi * 2 * (hours / CGFloat(12))
+        hourLine.transform = CGAffineTransform(rotationAngle: angleHour)
+        
+        let angleMinute = CGFloat.pi * 2 * (minute / CGFloat(60))
+        minuteLine.transform = CGAffineTransform(rotationAngle: angleMinute)
+        
+        let angleSecond = CGFloat.pi * 2 * (second / CGFloat(60))
+        secondLine.transform = CGAffineTransform(rotationAngle: angleSecond)
+        
+        for v in [topMarker, leftMarker, rightMarker, bottomMarker, hourLine, minuteLine, secondLine, roundedView ] {
+            addSubview(v)
+        }
     }
 }

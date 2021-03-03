@@ -7,17 +7,16 @@
 
 import UIKit
 
-protocol SegmentViewDelegate {
-    func change(to index: Int)
+protocol SegmentViewDelegate: NSObjectProtocol {
+    func segmentView(_ segmentView: SegmentView)
 }
 
 @IBDesignable
 class SegmentView: UIView {
-    
+    weak var delegate: SegmentViewDelegate?
     var buttons = [UIButton]()
     var buttonTitles:[String]!
-    var delegate: SegmentViewDelegate?
-    var selectedIndex: Int = 0
+        var selectedIndex: Int = 0
     var sv = UIStackView()
     
     @IBInspectable
@@ -116,7 +115,7 @@ class SegmentView: UIView {
             if btn == button {
                 let selectorStartPosition = frame.width / CGFloat(buttons.count) * CGFloat(buttonIndex)
                 selectedIndex = buttonIndex
-                delegate?.change(to: selectedIndex)
+                delegate?.segmentView(self)
                 UIView.animate(withDuration: 0.3, animations: {
                     self.selector.frame.origin.x = selectorStartPosition
                 })

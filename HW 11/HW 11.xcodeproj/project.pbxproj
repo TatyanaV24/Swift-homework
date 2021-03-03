@@ -15,6 +15,7 @@
 		BF7F8CD025DAA9FF0055B761 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F8CCF25DAA9FF0055B761 /* CustomButton.swift */; };
 		BF7F8CD325DACA510055B761 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F8CD225DACA510055B761 /* ClockView.swift */; };
 		BF7F8CD625DAE8E20055B761 /* SegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F8CD525DAE8E20055B761 /* SegmentView.swift */; };
+		BFE2CFA625EFCA8A004DA38D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2CFA525EFCA8A004DA38D /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BF7F8CCF25DAA9FF0055B761 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		BF7F8CD225DACA510055B761 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		BF7F8CD525DAE8E20055B761 /* SegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentView.swift; sourceTree = "<group>"; };
+		BFE2CFA525EFCA8A004DA38D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				BF7F8CBA25DAA7C70055B761 /* AppDelegate.swift */,
 				BF7F8CBC25DAA7C70055B761 /* SceneDelegate.swift */,
 				BF7F8CD525DAE8E20055B761 /* SegmentView.swift */,
+				BFE2CFA525EFCA8A004DA38D /* ViewController.swift */,
 				BF7F8CC025DAA7C70055B761 /* Main.storyboard */,
 				BF7F8CCF25DAA9FF0055B761 /* CustomButton.swift */,
 				BF7F8CD225DACA510055B761 /* ClockView.swift */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE2CFA625EFCA8A004DA38D /* ViewController.swift in Sources */,
 				BF7F8CD025DAA9FF0055B761 /* CustomButton.swift in Sources */,
 				BF7F8CD325DACA510055B761 /* ClockView.swift in Sources */,
 				BF7F8CBB25DAA7C70055B761 /* AppDelegate.swift in Sources */,
