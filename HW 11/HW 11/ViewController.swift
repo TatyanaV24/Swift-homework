@@ -9,14 +9,14 @@ import UIKit
 
 class ViewController: UIViewController, SegmentViewDelegate {
     
-    let segment = SegmentView()
-        
+    @IBOutlet weak var segment: SegmentView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         segment.delegate = self
-        view.addSubview(segment)
     }
-    func segmentView(sender: UIButton) {
-           print("pressed segment view")
+    
+    func segmentView(sender: SegmentView) {
+        print("pressed segment view")
     }
 }

@@ -8,11 +8,12 @@
 import UIKit
 
 protocol SegmentViewDelegate: NSObjectProtocol {
-    func segmentView(sender: UIButton)
+    func segmentView(sender: SegmentView)
 }
 
 @IBDesignable
 class SegmentView: UIView {
+    
     var delegate: SegmentViewDelegate?
     var buttons = [UIButton]()
     var buttonTitles:[String]!
@@ -115,6 +116,7 @@ class SegmentView: UIView {
             if btn == button {
                 let selectorStartPosition = frame.width / CGFloat(buttons.count) * CGFloat(buttonIndex)
                 selectedIndex = buttonIndex
+                delegate?.segmentView(sender: self)
                 UIView.animate(withDuration: 0.3, animations: {
                     self.selector.frame.origin.x = selectorStartPosition
                 })
@@ -123,8 +125,5 @@ class SegmentView: UIView {
                 btn.isSelected = false
             }
         }
-    }
-    func segmentView(sender: UIButton){
-        delegate?.segmentView(sender: sender)
     }
 }
