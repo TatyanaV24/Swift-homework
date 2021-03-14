@@ -41,7 +41,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15ºС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvM-d0-UhS">
-                                <rect key="frame" x="256.5" y="144.5" width="40.5" height="20"/>
+                                <rect key="frame" x="255" y="144.5" width="40.5" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="ioC-Hr-Ge0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
                                 <color key="textColor" red="0.094006903469562531" green="0.28385055065155029" blue="0.53326410055160522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -65,97 +68,83 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4j4-2A-9Jh">
-                                <rect key="frame" x="0.0" y="328" width="414" height="534"/>
+                                <rect key="frame" x="0.0" y="328" width="414" height="209"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WeatherViewCell" rowHeight="145" id="DA6-tB-E63" customClass="WeatherViewCell" customModule="HW_12" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="145"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WeatherViewCell" rowHeight="160" id="DA6-tB-E63" customClass="WeatherViewCell" customModule="HW_12" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DA6-tB-E63" id="R9F-Q2-vgy" customClass="WeatherViewCell" customModule="HW_12" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="145"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11.03" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hh-gu-Jrh">
-                                                    <rect key="frame" x="30" y="50" width="106" height="45.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11.03" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hh-gu-Jrh">
+                                                    <rect key="frame" x="30" y="21" width="106" height="118"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="40"/>
                                                     <color key="textColor" red="0.094006903469562531" green="0.28385055065155029" blue="0.53326410055160522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Средняя температура " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjf-17-FwK">
-                                                    <rect key="frame" x="143" y="21" width="178" height="17.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" fixedFrame="YES" text="Средняя температура " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjf-17-FwK">
+                                                    <rect key="frame" x="142" y="21" width="178" height="17.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
                                                     <color key="textColor" red="0.094006903469562531" green="0.28385055065155029" blue="0.53326410055160522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Мин температура " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsy-Ce-Xre">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" fixedFrame="YES" text="Мин температура " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsy-Ce-Xre">
                                                     <rect key="frame" x="142" y="46.5" width="146.5" height="17.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
                                                     <color key="textColor" red="0.094006903469562531" green="0.28385055065155029" blue="0.53326410055160522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Макс температура " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7V-yy-ahj">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" fixedFrame="YES" text="Макс температура " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7V-yy-ahj">
                                                     <rect key="frame" x="142" y="72" width="152" height="17.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
                                                     <color key="textColor" red="0.094006903469562531" green="0.28385055065155029" blue="0.53326410055160522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Описание" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQH-sm-NIC">
-                                                    <rect key="frame" x="143" y="97.5" width="80.5" height="17.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" fixedFrame="YES" text="Описание" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQH-sm-NIC">
+                                                    <rect key="frame" x="142" y="97.5" width="80.5" height="17.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
                                                     <color key="textColor" red="0.094006903469562531" green="0.28385055065155029" blue="0.53326410055160522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15ºС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOO-IU-1eV">
-                                                    <rect key="frame" x="331" y="21" width="35.5" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15ºС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOO-IU-1eV">
+                                                    <rect key="frame" x="330" y="21" width="35.5" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
                                                     <color key="textColor" red="0.094006903469562531" green="0.28385055065155029" blue="0.53326410055160522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15ºС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bk6-bU-x9P">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15ºС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bk6-bU-x9P">
                                                     <rect key="frame" x="298.5" y="47" width="35.5" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
                                                     <color key="textColor" red="0.094006903469562531" green="0.28385055065155029" blue="0.53326410055160522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15ºС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTm-ga-FZn">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15ºС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTm-ga-FZn">
                                                     <rect key="frame" x="304" y="73" width="35.5" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
                                                     <color key="textColor" red="0.094006903469562531" green="0.28385055065155029" blue="0.53326410055160522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15º" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oj6-v1-ncx">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15º" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oj6-v1-ncx">
                                                     <rect key="frame" x="233.5" y="97.5" width="25" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
                                                     <color key="textColor" red="0.094006903469562531" green="0.28385055065155029" blue="0.53326410055160522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="6hh-gu-Jrh" firstAttribute="leading" secondItem="R9F-Q2-vgy" secondAttribute="leadingMargin" constant="10" id="0v5-ar-XhC"/>
-                                                <constraint firstAttribute="trailing" secondItem="LOO-IU-1eV" secondAttribute="trailing" constant="47.5" id="2oe-Nk-0gS"/>
-                                                <constraint firstItem="k7V-yy-ahj" firstAttribute="top" secondItem="Vsy-Ce-Xre" secondAttribute="bottom" constant="8" id="32e-dB-qnc"/>
-                                                <constraint firstItem="6hh-gu-Jrh" firstAttribute="centerY" secondItem="R9F-Q2-vgy" secondAttribute="centerY" id="4qq-hp-uJQ"/>
-                                                <constraint firstItem="FQH-sm-NIC" firstAttribute="leading" secondItem="R9F-Q2-vgy" secondAttribute="leadingMargin" constant="123" id="7If-Ix-8kC"/>
-                                                <constraint firstItem="Zjf-17-FwK" firstAttribute="leading" secondItem="R9F-Q2-vgy" secondAttribute="leadingMargin" constant="123" id="7tT-O2-dLP"/>
-                                                <constraint firstAttribute="trailing" secondItem="bk6-bU-x9P" secondAttribute="trailing" constant="80" id="8Ey-Yu-aJv"/>
-                                                <constraint firstAttribute="trailing" secondItem="DTm-ga-FZn" secondAttribute="trailing" constant="74.5" id="Ezz-Os-TmG"/>
-                                                <constraint firstItem="DTm-ga-FZn" firstAttribute="top" secondItem="bk6-bU-x9P" secondAttribute="bottom" constant="8" id="Jcf-AZ-POK"/>
-                                                <constraint firstItem="bk6-bU-x9P" firstAttribute="top" secondItem="LOO-IU-1eV" secondAttribute="bottom" constant="8" id="Oc1-gA-rAQ"/>
-                                                <constraint firstItem="k7V-yy-ahj" firstAttribute="leading" secondItem="6hh-gu-Jrh" secondAttribute="trailing" constant="6" id="PjN-up-qQP"/>
-                                                <constraint firstAttribute="trailing" secondItem="oj6-v1-ncx" secondAttribute="trailing" constant="155.5" id="Rkh-OX-tA3"/>
-                                                <constraint firstItem="oj6-v1-ncx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FQH-sm-NIC" secondAttribute="trailing" constant="8" symbolic="YES" id="T1Q-Qa-5xM"/>
-                                                <constraint firstItem="Vsy-Ce-Xre" firstAttribute="leading" secondItem="6hh-gu-Jrh" secondAttribute="trailing" constant="6" id="Whh-jL-sOU"/>
-                                                <constraint firstItem="Vsy-Ce-Xre" firstAttribute="top" secondItem="Zjf-17-FwK" secondAttribute="bottom" constant="8" id="Wxi-yB-Cf9"/>
-                                                <constraint firstItem="LOO-IU-1eV" firstAttribute="top" secondItem="R9F-Q2-vgy" secondAttribute="topMargin" constant="10" id="bL2-4D-8ZX"/>
-                                                <constraint firstItem="FQH-sm-NIC" firstAttribute="top" secondItem="k7V-yy-ahj" secondAttribute="bottom" constant="8" id="bna-c0-v47"/>
-                                                <constraint firstItem="DTm-ga-FZn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="k7V-yy-ahj" secondAttribute="trailing" constant="8" symbolic="YES" id="iVI-CK-Isw"/>
-                                                <constraint firstItem="bk6-bU-x9P" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Vsy-Ce-Xre" secondAttribute="trailing" constant="8" symbolic="YES" id="oNk-ex-c3s"/>
-                                                <constraint firstItem="LOO-IU-1eV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Zjf-17-FwK" secondAttribute="trailing" constant="8" symbolic="YES" id="u11-w1-JN0"/>
-                                                <constraint firstItem="oj6-v1-ncx" firstAttribute="top" secondItem="k7V-yy-ahj" secondAttribute="bottom" constant="8" id="wQw-bt-YPy"/>
-                                                <constraint firstItem="Zjf-17-FwK" firstAttribute="top" secondItem="R9F-Q2-vgy" secondAttribute="topMargin" constant="10" id="wt0-mi-0Og"/>
-                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.8312630057" green="0.95691555740000001" blue="0.9214568138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="averageTempLabel" destination="LOO-IU-1eV" id="rYn-wx-JqF"/>
                                             <outlet property="dayLabel" destination="6hh-gu-Jrh" id="dmp-Xv-vqp"/>
@@ -185,29 +174,29 @@
                             <constraint firstItem="CGp-ev-DjR" firstAttribute="leading" secondItem="lbi-ZN-WBV" secondAttribute="trailing" constant="10" id="1IA-w2-lbk"/>
                             <constraint firstItem="3FF-PB-OLB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="446-LD-uT2"/>
                             <constraint firstItem="Ab4-8K-tNJ" firstAttribute="top" secondItem="CGp-ev-DjR" secondAttribute="bottom" constant="30" id="5t7-uP-7ZK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aK6-tz-xQK" secondAttribute="trailing" symbolic="YES" id="6Hi-Fx-uj7"/>
                             <constraint firstItem="ztO-wF-RgI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="6bg-KU-wXL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CGp-ev-DjR" secondAttribute="trailing" symbolic="YES" id="9qX-k5-S4V"/>
                             <constraint firstItem="4j4-2A-9Jh" firstAttribute="top" secondItem="Ab4-8K-tNJ" secondAttribute="bottom" constant="15" id="ACl-qj-sPo"/>
                             <constraint firstItem="gG5-ia-3vB" firstAttribute="top" secondItem="3FF-PB-OLB" secondAttribute="bottom" constant="10" id="AcK-zR-4G2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dvM-d0-UhS" secondAttribute="trailing" constant="117" id="GKv-gP-zXM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aK6-tz-xQK" secondAttribute="trailing" symbolic="YES" id="Hn3-Hs-klr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1a4-Kn-FJe" secondAttribute="trailing" constant="164" id="IaU-s1-CUb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CGp-ev-DjR" secondAttribute="trailing" symbolic="YES" id="Aty-fA-Ar3"/>
                             <constraint firstItem="aK6-tz-xQK" firstAttribute="leading" secondItem="ztO-wF-RgI" secondAttribute="trailing" constant="10" id="Jt6-2X-x7F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4j4-2A-9Jh" secondAttribute="trailing" id="LfV-aP-5c6"/>
                             <constraint firstItem="dvM-d0-UhS" firstAttribute="top" secondItem="E0V-Ql-xGd" secondAttribute="bottom" constant="26" id="LsI-5O-3ZM"/>
                             <constraint firstItem="4j4-2A-9Jh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NFN-tF-ghk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dvM-d0-UhS" secondAttribute="trailing" symbolic="YES" id="PEt-Ok-CoB"/>
                             <constraint firstItem="gG5-ia-3vB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="QPW-HP-GSi"/>
                             <constraint firstItem="E0V-Ql-xGd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QX0-FK-PPy"/>
                             <constraint firstItem="1a4-Kn-FJe" firstAttribute="top" secondItem="dvM-d0-UhS" secondAttribute="bottom" constant="10" id="V5y-CE-Tkh"/>
                             <constraint firstItem="lbi-ZN-WBV" firstAttribute="top" secondItem="ztO-wF-RgI" secondAttribute="bottom" constant="10" id="Z6l-rg-CNv"/>
                             <constraint firstItem="E0V-Ql-xGd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="a4u-Qz-dq2"/>
                             <constraint firstItem="ztO-wF-RgI" firstAttribute="top" secondItem="gG5-ia-3vB" secondAttribute="bottom" constant="10" id="b0S-SE-zmS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4j4-2A-9Jh" secondAttribute="bottom" id="bmY-27-LfA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4j4-2A-9Jh" secondAttribute="bottom" constant="325" id="bmY-27-LfA"/>
                             <constraint firstItem="Ab4-8K-tNJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d4p-Qc-Hmf"/>
-                            <constraint firstItem="1a4-Kn-FJe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gG5-ia-3vB" secondAttribute="trailing" constant="8" symbolic="YES" id="jSj-5z-vAZ"/>
+                            <constraint firstItem="1a4-Kn-FJe" firstAttribute="leading" secondItem="gG5-ia-3vB" secondAttribute="trailing" constant="10" id="jSj-5z-vAZ"/>
                             <constraint firstItem="lbi-ZN-WBV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="kXP-64-cMl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1a4-Kn-FJe" secondAttribute="trailing" symbolic="YES" id="kha-cx-K9a"/>
                             <constraint firstItem="aK6-tz-xQK" firstAttribute="top" secondItem="1a4-Kn-FJe" secondAttribute="bottom" constant="10" id="oj1-NR-mab"/>
-                            <constraint firstItem="dvM-d0-UhS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3FF-PB-OLB" secondAttribute="trailing" constant="8" symbolic="YES" id="rVc-0Z-mJq"/>
+                            <constraint firstItem="dvM-d0-UhS" firstAttribute="leading" secondItem="3FF-PB-OLB" secondAttribute="trailing" constant="10" id="rVc-0Z-mJq"/>
                             <constraint firstItem="CGp-ev-DjR" firstAttribute="top" secondItem="aK6-tz-xQK" secondAttribute="bottom" constant="10" id="vKA-Ls-MqX"/>
                             <constraint firstItem="3FF-PB-OLB" firstAttribute="top" secondItem="E0V-Ql-xGd" secondAttribute="bottom" constant="26" id="zOz-Uk-yWO"/>
                         </constraints>
