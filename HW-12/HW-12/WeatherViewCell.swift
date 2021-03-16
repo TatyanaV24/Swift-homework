@@ -13,6 +13,6 @@ class WeatherViewCell: UITableViewCell {
     @IBOutlet weak var averageTempLabel: UILabel!
     @IBOutlet weak var minTempLabel: UILabel!
     @IBOutlet weak var maxTempLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+   
     
 }

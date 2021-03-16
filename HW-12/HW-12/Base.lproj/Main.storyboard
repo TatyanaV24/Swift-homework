@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g7t-gy-beX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,7 +8,218 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item 2-->
+        <scene sceneID="tpM-pG-9Zc">
+            <objects>
+                <viewController id="ZXD-Yv-X65" customClass="AlamofireViewController" customModule="HW_12" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hYd-jj-v5j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Температура сейчас -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6s-8j-2gG">
+                                <rect key="frame" x="51" y="141.5" width="195" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                                <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ощущается как " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKD-qP-5ep">
+                                <rect key="frame" x="51" y="171" width="147" height="20"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                                <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Давление" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqm-ST-GQ3">
+                                <rect key="frame" x="51" y="201" width="89.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                                <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Влажность" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAn-YY-eY0">
+                                <rect key="frame" x="51" y="231" width="101" height="20"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                                <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15ºС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVT-yg-AMY">
+                                <rect key="frame" x="256" y="141.5" width="40.5" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="QBs-0r-jSf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                                <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ij6-N6-qWB">
+                                <rect key="frame" x="150.5" y="200.5" width="32.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                                <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQs-Nn-arY">
+                                <rect key="frame" x="162" y="230.5" width="30" height="20"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                                <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Погода на неделю" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGu-e2-HLr">
+                                <rect key="frame" x="86" y="280.5" width="244" height="28.5"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="25"/>
+                                <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GOu-yM-RdY">
+                                <rect key="frame" x="1" y="324" width="414" height="490"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AlamofireTableViewCell" rowHeight="160" id="M42-6F-PXG" customClass="AlamofireTableViewCell" customModule="HW_12" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M42-6F-PXG" id="joy-OK-an1" customClass="WeatherViewCell" customModule="HW_12" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11.03" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2b-GA-aXe">
+                                                    <rect key="frame" x="40" y="28" width="90" height="70"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                    <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="12"/>
+                                                    <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" fixedFrame="YES" text="Средняя температура " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AL4-0D-xUF">
+                                                    <rect key="frame" x="140" y="28" width="178" height="17.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
+                                                    <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" fixedFrame="YES" text="Мин температура " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XuF-2Q-HHf">
+                                                    <rect key="frame" x="140" y="53.5" width="146.5" height="17.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
+                                                    <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15ºС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaX-7v-YEa">
+                                                    <rect key="frame" x="326" y="28" width="58" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
+                                                    <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15ºС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCO-YG-h5q">
+                                                    <rect key="frame" x="297" y="54" width="63" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
+                                                    <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15ºС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcT-09-kVq">
+                                                    <rect key="frame" x="302" y="80" width="63" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
+                                                    <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" fixedFrame="YES" text="Макс температура " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBW-b9-IPG">
+                                                    <rect key="frame" x="140" y="79" width="152" height="17.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
+                                                    <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                        <connections>
+                                            <outlet property="averTempLabel" destination="aaX-7v-YEa" id="SOA-3a-fwX"/>
+                                            <outlet property="averageTempLabel" destination="aaX-7v-YEa" id="P6s-jG-G21"/>
+                                            <outlet property="dateLabel" destination="l2b-GA-aXe" id="cZ6-Bl-7ZV"/>
+                                            <outlet property="dayLabel" destination="l2b-GA-aXe" id="rFg-tW-rIA"/>
+                                            <outlet property="maxTempLabel" destination="vBW-b9-IPG" id="4SL-hn-0Ui"/>
+                                            <outlet property="minTempLabel" destination="iCO-YG-h5q" id="Py4-pq-97Q"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="23ºС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6J-UD-KkO">
+                                <rect key="frame" x="208" y="171.5" width="43" height="19"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                                <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Москва" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zck-AT-dmD">
+                                <rect key="frame" x="126" y="70" width="162" height="45.5"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="40"/>
+                                <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ujb-RX-6b8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ij6-N6-qWB" firstAttribute="leading" secondItem="Jqm-ST-GQ3" secondAttribute="trailing" constant="10" id="3Ri-hb-o6X"/>
+                            <constraint firstItem="AQs-Nn-arY" firstAttribute="top" secondItem="Ij6-N6-qWB" secondAttribute="bottom" constant="10" id="4Mm-75-wfR"/>
+                            <constraint firstItem="v6s-8j-2gG" firstAttribute="top" secondItem="Zck-AT-dmD" secondAttribute="bottom" constant="26" id="Ac9-MF-hpW"/>
+                            <constraint firstItem="FKD-qP-5ep" firstAttribute="leading" secondItem="Jqm-ST-GQ3" secondAttribute="leading" id="Bgw-5X-XIE"/>
+                            <constraint firstItem="tVT-yg-AMY" firstAttribute="leading" secondItem="v6s-8j-2gG" secondAttribute="trailing" constant="10" id="CfQ-LR-5df"/>
+                            <constraint firstItem="FKD-qP-5ep" firstAttribute="leading" secondItem="ujb-RX-6b8" secondAttribute="leading" constant="51" id="EfG-S3-cus"/>
+                            <constraint firstItem="c6J-UD-KkO" firstAttribute="top" secondItem="tVT-yg-AMY" secondAttribute="bottom" constant="10" id="GRI-en-K4p"/>
+                            <constraint firstItem="Jqm-ST-GQ3" firstAttribute="top" secondItem="FKD-qP-5ep" secondAttribute="bottom" constant="10" id="IRa-NS-Lt6"/>
+                            <constraint firstItem="FKD-qP-5ep" firstAttribute="baseline" secondItem="c6J-UD-KkO" secondAttribute="firstBaseline" id="Ida-fZ-IEf"/>
+                            <constraint firstItem="FKD-qP-5ep" firstAttribute="leading" secondItem="hAn-YY-eY0" secondAttribute="leading" id="JWa-Tz-d6G"/>
+                            <constraint firstItem="bGu-e2-HLr" firstAttribute="top" secondItem="AQs-Nn-arY" secondAttribute="bottom" constant="30" id="O78-Cd-Z0D"/>
+                            <constraint firstItem="AQs-Nn-arY" firstAttribute="leading" secondItem="hAn-YY-eY0" secondAttribute="trailing" constant="10" id="R7X-BQ-jUa"/>
+                            <constraint firstItem="hAn-YY-eY0" firstAttribute="top" secondItem="Jqm-ST-GQ3" secondAttribute="bottom" constant="10" id="Sju-Yx-Nyp"/>
+                            <constraint firstItem="tVT-yg-AMY" firstAttribute="top" secondItem="Zck-AT-dmD" secondAttribute="bottom" constant="26" id="UpN-Gc-v4T"/>
+                            <constraint firstItem="c6J-UD-KkO" firstAttribute="leading" secondItem="FKD-qP-5ep" secondAttribute="trailing" constant="10" id="VjU-RI-LIa"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="GOu-yM-RdY" secondAttribute="bottom" constant="-1" id="VvO-ws-c9Z"/>
+                            <constraint firstItem="FKD-qP-5ep" firstAttribute="centerY" secondItem="c6J-UD-KkO" secondAttribute="centerY" id="Xcf-i0-DCX"/>
+                            <constraint firstItem="FKD-qP-5ep" firstAttribute="top" secondItem="v6s-8j-2gG" secondAttribute="bottom" constant="10" id="auA-AA-5Bh"/>
+                            <constraint firstItem="Zck-AT-dmD" firstAttribute="centerX" secondItem="hYd-jj-v5j" secondAttribute="centerX" id="bdP-zN-T4u"/>
+                            <constraint firstItem="GOu-yM-RdY" firstAttribute="top" secondItem="bGu-e2-HLr" secondAttribute="bottom" constant="15" id="c0v-g0-yR9"/>
+                            <constraint firstItem="Zck-AT-dmD" firstAttribute="top" secondItem="ujb-RX-6b8" secondAttribute="top" constant="26" id="cjA-1a-gDK"/>
+                            <constraint firstItem="FKD-qP-5ep" firstAttribute="leading" secondItem="v6s-8j-2gG" secondAttribute="leading" id="ea3-yA-TE2"/>
+                            <constraint firstItem="Ij6-N6-qWB" firstAttribute="top" secondItem="c6J-UD-KkO" secondAttribute="bottom" constant="10" id="nbG-PJ-QVB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GOu-yM-RdY" secondAttribute="trailing" constant="-21" id="qgC-QB-jK8"/>
+                            <constraint firstItem="GOu-yM-RdY" firstAttribute="centerX" secondItem="bGu-e2-HLr" secondAttribute="centerX" id="ud5-Iq-Rzv"/>
+                            <constraint firstItem="GOu-yM-RdY" firstAttribute="leading" secondItem="ujb-RX-6b8" secondAttribute="leading" constant="1" id="xS7-sK-VyK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="c0Z-Lh-Pwc"/>
+                    <connections>
+                        <outlet property="alamTableView" destination="GOu-yM-RdY" id="rvJ-Si-ZAz"/>
+                        <outlet property="cityLabel" destination="Zck-AT-dmD" id="wwp-HO-Mww"/>
+                        <outlet property="feelsLabel" destination="c6J-UD-KkO" id="Erj-1l-1Ss"/>
+                        <outlet property="humLabel" destination="AQs-Nn-arY" id="BCV-M4-Vkv"/>
+                        <outlet property="pressLabel" destination="Ij6-N6-qWB" id="PYs-oh-Hb3"/>
+                        <outlet property="tempLabel" destination="tVT-yg-AMY" id="kUs-4K-aOO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jqt-jP-ueu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-317" y="248"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="DxN-8L-LoK">
+            <objects>
+                <tabBarController id="g7t-gy-beX" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Saw-ZR-tQt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="QMn-m5-pAP"/>
+                        <segue destination="ZXD-Yv-X65" kind="relationship" relationship="viewControllers" id="ahG-10-h2g"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOk-cM-V8Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1378" y="-26"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HW_12" customModuleProvider="target" sceneMemberID="viewController">
@@ -68,7 +279,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4j4-2A-9Jh">
-                                <rect key="frame" x="0.0" y="328" width="414" height="209"/>
+                                <rect key="frame" x="0.0" y="328" width="414" height="485"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WeatherViewCell" rowHeight="160" id="DA6-tB-E63" customClass="WeatherViewCell" customModule="HW_12" customModuleProvider="target">
@@ -78,65 +289,52 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11.03" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hh-gu-Jrh">
-                                                    <rect key="frame" x="30" y="21" width="106" height="118"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11.03" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hh-gu-Jrh">
+                                                    <rect key="frame" x="40" y="28" width="90" height="70"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                                    <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="40"/>
+                                                    <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="30"/>
                                                     <color key="textColor" red="0.094006903469562531" green="0.28385055065155029" blue="0.53326410055160522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" fixedFrame="YES" text="Средняя температура " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjf-17-FwK">
-                                                    <rect key="frame" x="142" y="21" width="178" height="17.5"/>
+                                                    <rect key="frame" x="140" y="28" width="178" height="17.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
                                                     <color key="textColor" red="0.094006903469562531" green="0.28385055065155029" blue="0.53326410055160522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" fixedFrame="YES" text="Мин температура " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsy-Ce-Xre">
-                                                    <rect key="frame" x="142" y="46.5" width="146.5" height="17.5"/>
+                                                    <rect key="frame" x="140" y="53.5" width="146.5" height="17.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
                                                     <color key="textColor" red="0.094006903469562531" green="0.28385055065155029" blue="0.53326410055160522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" fixedFrame="YES" text="Макс температура " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7V-yy-ahj">
-                                                    <rect key="frame" x="142" y="72" width="152" height="17.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15ºС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOO-IU-1eV">
+                                                    <rect key="frame" x="326" y="28" width="58" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
                                                     <color key="textColor" red="0.094006903469562531" green="0.28385055065155029" blue="0.53326410055160522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" fixedFrame="YES" text="Описание" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQH-sm-NIC">
-                                                    <rect key="frame" x="142" y="97.5" width="80.5" height="17.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
-                                                    <color key="textColor" red="0.094006903469562531" green="0.28385055065155029" blue="0.53326410055160522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15ºС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOO-IU-1eV">
-                                                    <rect key="frame" x="330" y="21" width="35.5" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
-                                                    <color key="textColor" red="0.094006903469562531" green="0.28385055065155029" blue="0.53326410055160522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15ºС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bk6-bU-x9P">
-                                                    <rect key="frame" x="298.5" y="47" width="35.5" height="18"/>
+                                                    <rect key="frame" x="297" y="54" width="63" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
                                                     <color key="textColor" red="0.094006903469562531" green="0.28385055065155029" blue="0.53326410055160522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15ºС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTm-ga-FZn">
-                                                    <rect key="frame" x="304" y="73" width="35.5" height="18"/>
+                                                    <rect key="frame" x="302" y="80" width="63" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
                                                     <color key="textColor" red="0.094006903469562531" green="0.28385055065155029" blue="0.53326410055160522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15º" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oj6-v1-ncx">
-                                                    <rect key="frame" x="233.5" y="97.5" width="25" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" fixedFrame="YES" text="Макс температура " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7V-yy-ahj">
+                                                    <rect key="frame" x="140" y="79" width="152" height="17.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
                                                     <color key="textColor" red="0.094006903469562531" green="0.28385055065155029" blue="0.53326410055160522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -148,7 +346,6 @@
                                         <connections>
                                             <outlet property="averageTempLabel" destination="LOO-IU-1eV" id="rYn-wx-JqF"/>
                                             <outlet property="dayLabel" destination="6hh-gu-Jrh" id="dmp-Xv-vqp"/>
-                                            <outlet property="descriptionLabel" destination="oj6-v1-ncx" id="5x5-4D-Qwl"/>
                                             <outlet property="maxTempLabel" destination="DTm-ga-FZn" id="xdK-FN-dCO"/>
                                             <outlet property="minTempLabel" destination="bk6-bU-x9P" id="QyI-GH-1Lp"/>
                                         </connections>
@@ -190,7 +387,7 @@
                             <constraint firstItem="lbi-ZN-WBV" firstAttribute="top" secondItem="ztO-wF-RgI" secondAttribute="bottom" constant="10" id="Z6l-rg-CNv"/>
                             <constraint firstItem="E0V-Ql-xGd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="a4u-Qz-dq2"/>
                             <constraint firstItem="ztO-wF-RgI" firstAttribute="top" secondItem="gG5-ia-3vB" secondAttribute="bottom" constant="10" id="b0S-SE-zmS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4j4-2A-9Jh" secondAttribute="bottom" constant="325" id="bmY-27-LfA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4j4-2A-9Jh" secondAttribute="bottom" id="bmY-27-LfA"/>
                             <constraint firstItem="Ab4-8K-tNJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d4p-Qc-Hmf"/>
                             <constraint firstItem="1a4-Kn-FJe" firstAttribute="leading" secondItem="gG5-ia-3vB" secondAttribute="trailing" constant="10" id="jSj-5z-vAZ"/>
                             <constraint firstItem="lbi-ZN-WBV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="kXP-64-cMl"/>
@@ -201,6 +398,7 @@
                             <constraint firstItem="3FF-PB-OLB" firstAttribute="top" secondItem="E0V-Ql-xGd" secondAttribute="bottom" constant="26" id="zOz-Uk-yWO"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="q0Y-JS-LJC"/>
                     <connections>
                         <outlet property="cityNameLabel" destination="E0V-Ql-xGd" id="DdU-CJ-vOE"/>
                         <outlet property="feelsLikeLabel" destination="1a4-Kn-FJe" id="SOs-KF-lxa"/>
@@ -212,12 +410,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+            <point key="canvasLocation" x="-314" y="-395"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

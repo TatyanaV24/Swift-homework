@@ -24,6 +24,7 @@ struct Nain: Codable {
 }
 
 struct FeatherData: Codable {
+    var dt:Int = 0
     var weather:[Feather] = []
     var main: Nain = Nain()
     var dt_txt: String = ""

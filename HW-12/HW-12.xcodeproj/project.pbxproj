@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BF5BA72225FBE7310092CF9A /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5BA72125FBE7310092CF9A /* DayModel.swift */; };
+		BF5BA7322600A3A20092CF9A /* AlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5BA7312600A3A20092CF9A /* AlamofireViewController.swift */; };
+		BF5BA7352600A9CB0092CF9A /* AlamofireTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5BA7342600A9CB0092CF9A /* AlamofireTableViewCell.swift */; };
 		BFA3FD4B25F90AA6005DD55C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3FD4A25F90AA6005DD55C /* AppDelegate.swift */; };
 		BFA3FD4D25F90AA6005DD55C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3FD4C25F90AA6005DD55C /* SceneDelegate.swift */; };
 		BFA3FD4F25F90AA6005DD55C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3FD4E25F90AA6005DD55C /* ViewController.swift */; };
@@ -16,10 +18,15 @@
 		BFA3FD5725F90AA7005DD55C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA3FD5525F90AA7005DD55C /* LaunchScreen.storyboard */; };
 		BFA3FD6025F90B63005DD55C /* DateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3FD5F25F90B63005DD55C /* DateModel.swift */; };
 		BFA3FD6325F9226C005DD55C /* WeatherViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3FD6225F9226C005DD55C /* WeatherViewCell.swift */; };
+		CC8E160A968B7EC7DB5B437B /* Pods_HW_12.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CBB8473CE8E1DE6202B2D8 /* Pods_HW_12.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50CBB8473CE8E1DE6202B2D8 /* Pods_HW_12.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HW_12.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F7CDCDE6282CE76F5CB5B70 /* Pods-HW-12.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW-12.release.xcconfig"; path = "Target Support Files/Pods-HW-12/Pods-HW-12.release.xcconfig"; sourceTree = "<group>"; };
 		BF5BA72125FBE7310092CF9A /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
+		BF5BA7312600A3A20092CF9A /* AlamofireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewController.swift; sourceTree = "<group>"; };
+		BF5BA7342600A9CB0092CF9A /* AlamofireTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireTableViewCell.swift; sourceTree = "<group>"; };
 		BFA3FD4725F90AA6005DD55C /* HW-12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW-12.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA3FD4A25F90AA6005DD55C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFA3FD4C25F90AA6005DD55C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +37,7 @@
 		BFA3FD5825F90AA7005DD55C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFA3FD5F25F90B63005DD55C /* DateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateModel.swift; sourceTree = "<group>"; };
 		BFA3FD6225F9226C005DD55C /* WeatherViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewCell.swift; sourceTree = "<group>"; };
+		CE16F6882A2ED5A9EAF301B7 /* Pods-HW-12.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW-12.debug.xcconfig"; path = "Target Support Files/Pods-HW-12/Pods-HW-12.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +45,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC8E160A968B7EC7DB5B437B /* Pods_HW_12.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		211FE94B87707D58F09972AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50CBB8473CE8E1DE6202B2D8 /* Pods_HW_12.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5751566D43BBAE39707A3B6C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE16F6882A2ED5A9EAF301B7 /* Pods-HW-12.debug.xcconfig */,
+				7F7CDCDE6282CE76F5CB5B70 /* Pods-HW-12.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BFA3FD3E25F90AA6005DD55C = {
 			isa = PBXGroup;
 			children = (
 				BFA3FD4925F90AA6005DD55C /* HW-12 */,
 				BFA3FD4825F90AA6005DD55C /* Products */,
+				5751566D43BBAE39707A3B6C /* Pods */,
+				211FE94B87707D58F09972AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,10 +94,12 @@
 				BFA3FD4A25F90AA6005DD55C /* AppDelegate.swift */,
 				BFA3FD4C25F90AA6005DD55C /* SceneDelegate.swift */,
 				BFA3FD4E25F90AA6005DD55C /* ViewController.swift */,
+				BF5BA7312600A3A20092CF9A /* AlamofireViewController.swift */,
 				BF5BA72125FBE7310092CF9A /* DayModel.swift */,
 				BFA3FD5F25F90B63005DD55C /* DateModel.swift */,
 				BFA3FD5025F90AA6005DD55C /* Main.storyboard */,
 				BFA3FD6225F9226C005DD55C /* WeatherViewCell.swift */,
+				BF5BA7342600A9CB0092CF9A /* AlamofireTableViewCell.swift */,
 				BFA3FD5325F90AA7005DD55C /* Assets.xcassets */,
 				BFA3FD5525F90AA7005DD55C /* LaunchScreen.storyboard */,
 				BFA3FD5825F90AA7005DD55C /* Info.plist */,
@@ -83,9 +114,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFA3FD5B25F90AA7005DD55C /* Build configuration list for PBXNativeTarget "HW-12" */;
 			buildPhases = (
+				063A8D3C3B9C0BF7C59595CB /* [CP] Check Pods Manifest.lock */,
 				BFA3FD4325F90AA6005DD55C /* Sources */,
 				BFA3FD4425F90AA6005DD55C /* Frameworks */,
 				BFA3FD4525F90AA6005DD55C /* Resources */,
+				D06DE53460DB1CB5C1363C31 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,6 +174,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		063A8D3C3B9C0BF7C59595CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HW-12-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D06DE53460DB1CB5C1363C31 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HW-12/Pods-HW-12-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HW-12/Pods-HW-12-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HW-12/Pods-HW-12-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BFA3FD4325F90AA6005DD55C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -148,6 +223,8 @@
 			files = (
 				BFA3FD4F25F90AA6005DD55C /* ViewController.swift in Sources */,
 				BFA3FD6025F90B63005DD55C /* DateModel.swift in Sources */,
+				BF5BA7352600A9CB0092CF9A /* AlamofireTableViewCell.swift in Sources */,
+				BF5BA7322600A3A20092CF9A /* AlamofireViewController.swift in Sources */,
 				BF5BA72225FBE7310092CF9A /* DayModel.swift in Sources */,
 				BFA3FD4B25F90AA6005DD55C /* AppDelegate.swift in Sources */,
 				BFA3FD6325F9226C005DD55C /* WeatherViewCell.swift in Sources */,
@@ -295,6 +372,7 @@
 		};
 		BFA3FD5C25F90AA7005DD55C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE16F6882A2ED5A9EAF301B7 /* Pods-HW-12.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +392,7 @@
 		};
 		BFA3FD5D25F90AA7005DD55C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F7CDCDE6282CE76F5CB5B70 /* Pods-HW-12.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

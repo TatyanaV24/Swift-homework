@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.weatherTableView.reloadData()
+        
         weatherTableView.delegate = self
         weatherTableView.dataSource = self
         
@@ -58,10 +58,6 @@ class ViewController: UIViewController {
                 self.list = json
                 self.mode = json.list
                 DispatchQueue.main.async {
-                    var mode:[FeatherData] = []
-                    for v in json.list {
-                        mode.append(v)
-                    }
                     self.weatherTableView.reloadData()
                 }
             } catch let error{
@@ -87,16 +83,26 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5 //list.count
+        return mode.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherViewCell", for: indexPath) as! WeatherViewCell
         let opt = mode[indexPath.row]
-        cell.averageTempLabel.text = opt.main.temp.description + "ºC"
-        cell.minTempLabel.text = list.list[indexPath.row].main.temp_min.description + "ºC"
-        cell.maxTempLabel.text = list.list[indexPath.row].main.temp_max.description + "ºC"
-        return cell
+        
+        let date = Date(timeIntervalSince1970: TimeInterval(opt.dt))
+        let localDateFormat = DateFormatter()
+//        localDateFormat.dateFormat = "HH:mm:ss"
+//        let dt_time = localDateFormat.string(from: date)
+//        print(dt_time)
+
+//        if(dt_time == "15:00:00"){
+            localDateFormat.dateFormat = "dd.MM"
+            cell.dayLabel.text = localDateFormat.string(from: date)
+            cell.averageTempLabel.text = opt.main.temp.description + "ºC"
+            cell.minTempLabel.text = opt.main.temp_min.description + "ºC"
+            cell.maxTempLabel.text = opt.main.temp_max.description + "ºC"
+ return cell
     }
 }
