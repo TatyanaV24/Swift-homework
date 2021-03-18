@@ -27,20 +27,34 @@ class AlamofireViewController: UIViewController {
         alamTableView.delegate = self
         alamTableView.dataSource = self
         
-        AF.request("http://api.openweathermap.org/data/2.5/weather?q=Moscow&units=metric&appid=ea5e2d3c2f5e9ec322593ff4b368cafc").responseJSON { response in
+        AF.request ("http://api.openweathermap.org/data/2.5/weather?q=Moscow&units=metric&appid=ea5e2d3c2f5e9ec322593ff4b368cafc").responseDecodable(of: WeatherData.self) { response in
             print(response)
             
             if let result = response.value {
                 let JSON = result
                 print(JSON)
-                
+                self.weatherDate = JSON
                 DispatchQueue.main.async {
                     self.updateView()
                 }
             }
         }
+        
+        AF.request ("http://api.openweathermap.org/data/2.5/forecast?q=Moscow&units=metric&appid=ea5e2d3c2f5e9ec322593ff4b368cafc").responseDecodable(of: ListW.self) { response in
+            print(response)
+            
+            if let result = response.value {
+                let json = result
+                print(json)
+                self.list = json
+                self.mode = json.list
+                DispatchQueue.main.async {
+                    self.alamTableView.reloadData()
+                }
+            }
+        }
     }
-    
+        
     func updateView() {
         cityLabel.text = weatherDate.name
         tempLabel.text = weatherDate.main.temp.description + "ºC"

@@ -134,10 +134,8 @@
                                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                                         <connections>
                                             <outlet property="averTempLabel" destination="aaX-7v-YEa" id="SOA-3a-fwX"/>
-                                            <outlet property="averageTempLabel" destination="aaX-7v-YEa" id="P6s-jG-G21"/>
                                             <outlet property="dateLabel" destination="l2b-GA-aXe" id="cZ6-Bl-7ZV"/>
-                                            <outlet property="dayLabel" destination="l2b-GA-aXe" id="rFg-tW-rIA"/>
-                                            <outlet property="maxTempLabel" destination="vBW-b9-IPG" id="4SL-hn-0Ui"/>
+                                            <outlet property="maxTempLabel" destination="zcT-09-kVq" id="nKw-g3-B2r"/>
                                             <outlet property="minTempLabel" destination="iCO-YG-h5q" id="Py4-pq-97Q"/>
                                         </connections>
                                     </tableViewCell>
@@ -291,7 +289,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11.03" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hh-gu-Jrh">
                                                     <rect key="frame" x="40" y="28" width="90" height="70"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="30"/>
                                                     <color key="textColor" red="0.094006903469562531" green="0.28385055065155029" blue="0.53326410055160522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

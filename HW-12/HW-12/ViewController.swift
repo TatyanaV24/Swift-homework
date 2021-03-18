@@ -93,16 +93,22 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
         let date = Date(timeIntervalSince1970: TimeInterval(opt.dt))
         let localDateFormat = DateFormatter()
-//        localDateFormat.dateFormat = "HH:mm:ss"
-//        let dt_time = localDateFormat.string(from: date)
-//        print(dt_time)
-
-//        if(dt_time == "15:00:00"){
+                
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let day = calendar.component(.day, from: date)
+        
+        if hour == 15{
             localDateFormat.dateFormat = "dd.MM"
             cell.dayLabel.text = localDateFormat.string(from: date)
             cell.averageTempLabel.text = opt.main.temp.description + "ºC"
             cell.minTempLabel.text = opt.main.temp_min.description + "ºC"
             cell.maxTempLabel.text = opt.main.temp_max.description + "ºC"
- return cell
+        } else {
+            print(day)
+            
+        }
+        return cell
+        
     }
 }
