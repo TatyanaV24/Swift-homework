@@ -46,15 +46,24 @@ class AlamofireViewController: UIViewController {
             if let result = response.value {
                 let json = result
                 print(json)
-                self.list = json
-                self.mode = json.list
                 DispatchQueue.main.async {
-                    self.alamTableView.reloadData()
+                    var uniqueDates: [String] = []
+                    let dateFormat = DateFormatter()
+                    dateFormat.dateFormat = "MM/dd/yyyy"
+                    json.list.forEach { (data) in
+                        let formattedDate = dateFormat.string(from: Date(timeIntervalSince1970: TimeInterval(data.dt)))
+                        
+                        if !uniqueDates.contains(formattedDate) {
+                            uniqueDates.append(formattedDate)
+                            self.mode.append(data)
+                        }
+                        self.alamTableView.reloadData()
+                    }
                 }
             }
         }
     }
-        
+    
     func updateView() {
         cityLabel.text = weatherDate.name
         tempLabel.text = weatherDate.main.temp.description + "ºC"
@@ -78,14 +87,8 @@ extension AlamofireViewController: UITableViewDataSource, UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "AlamofireTableViewCell", for: indexPath) as! AlamofireTableViewCell
         let opt = mode[indexPath.row]
-        
         let date = Date(timeIntervalSince1970: TimeInterval(opt.dt))
         let localDateFormat = DateFormatter()
-        //        localDateFormat.dateFormat = "HH:mm:ss"
-        //        let dt_time = localDateFormat.string(from: date)
-        //        print(dt_time)
-
-        //        if(dt_time == "15:00:00"){
         localDateFormat.dateFormat = "dd.MM"
         cell.dateLabel.text = localDateFormat.string(from: date)
         cell.averTempLabel.text = opt.main.temp.description + "ºC"

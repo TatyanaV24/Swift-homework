@@ -1,7 +1,7 @@
 //
 //  ViewController.swift
 //  HW-12
-//"api.openweathermap.org/data/2.5/onecall?lat=55.75&lon=37.61&exclude=daily&appid=ea5e2d3c2f5e9ec322593ff4b368cafc"
+
 //  Created by Татьяна Васильченко on 10.03.2021.
 //
 
@@ -55,16 +55,24 @@ class ViewController: UIViewController {
             do {
                 let json = try JSONDecoder().decode(ListW.self, from: data)
                 print(json)
-                self.list = json
-                self.mode = json.list
                 DispatchQueue.main.async {
-                    self.weatherTableView.reloadData()
+                    var uniqueDates: [String] = []
+                    let dateFormat = DateFormatter()
+                    dateFormat.dateFormat = "MM/dd/yyyy"
+                    json.list.forEach { (data) in
+                        let formattedDate = dateFormat.string(from: Date(timeIntervalSince1970: TimeInterval(data.dt)))
+                        
+                        if !uniqueDates.contains(formattedDate) {
+                            uniqueDates.append(formattedDate)
+                            self.mode.append(data)
+                        }
+                        self.weatherTableView.reloadData()
+                    }
                 }
             } catch let error{
                 print(error)
             }
         }.resume()
-        
     }
     
     func updateView() {
@@ -90,25 +98,13 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherViewCell", for: indexPath) as! WeatherViewCell
         let opt = mode[indexPath.row]
-        
         let date = Date(timeIntervalSince1970: TimeInterval(opt.dt))
         let localDateFormat = DateFormatter()
-                
-        let calendar = Calendar.current
-        let hour = calendar.component(.hour, from: date)
-        let day = calendar.component(.day, from: date)
-        
-        if hour == 15{
-            localDateFormat.dateFormat = "dd.MM"
-            cell.dayLabel.text = localDateFormat.string(from: date)
-            cell.averageTempLabel.text = opt.main.temp.description + "ºC"
-            cell.minTempLabel.text = opt.main.temp_min.description + "ºC"
-            cell.maxTempLabel.text = opt.main.temp_max.description + "ºC"
-        } else {
-            print(day)
-            
-        }
+        localDateFormat.dateFormat = "dd.MM"
+        cell.dayLabel.text = localDateFormat.string(from: date)
+        cell.averageTempLabel.text = opt.main.temp.description + "ºC"
+        cell.minTempLabel.text = opt.main.temp_min.description + "ºC"
+        cell.maxTempLabel.text = opt.main.temp_max.description + "ºC"
         return cell
-        
     }
 }
