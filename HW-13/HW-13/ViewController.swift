@@ -41,15 +41,21 @@ class ViewController: UIViewController {
         if buttonsPressed.count == 1 {
             self.numberArray[index].textColor = UIColor.blue
         } else {
-            self.index = self.index == self.numberArray.count-1 ? 0 : self.index + 1 // переходит к следующему элементу
+            self.index = self.index == self.numberArray.count-1 ? 0 : self.index + 1
             self.numberArray[index].textColor = UIColor.blue
         }
         changeView()
-    }
+        }
     
     @IBAction func previousButton(_ sender: UIButton) {
-        self.index = self.index == 0 ? self.numberArray.count - 1 : self.index - 1
-        self.numberArray[index].textColor = UIColor.red
+        self.buttonsPressed.append(sender)
+        if buttonsPressed.count == 1 {
+            self.index = self.numberArray.count - 1
+            self.numberArray[index].textColor = UIColor.red
+         } else {
+            self.index = self.index == 0 ? self.numberArray.count - 1 : self.index - 1
+            self.numberArray[index].textColor = UIColor.red
+        }
         changeView()
     }
     
@@ -67,42 +73,34 @@ class ViewController: UIViewController {
             }){(isCompleted) in self.pinkView.frame.origin.x = 89
                 self.pinkView.frame.origin.y = 268
             }
-            
         case 2: // Закругление краёв, чтобы квадрат выглядел как круг.
             
             UIView.animate(withDuration: 2, delay: 0, options: .autoreverse, animations: {
-                self.pinkView.layer.cornerRadius = 118
+                self.pinkView.layer.cornerRadius = self.pinkView.layer.bounds.size.width / 2
             })  {(isCompleted) in self.pinkView.layer.cornerRadius = 0
             }
-        //        let animation = CABasicAnimation(keyPath: "cornerRadius")
-        //            animation.fromValue = NSNumber(value: 0)
-        //            animation.fromValue = NSNumber(value: 118) // Float(UIScreen.main.bounds.size.width) / 2
-        //            animation.duration = 2.0
-        //            pinkView.layer.add(animation, forKey: "cornerRadius")
-        //            pinkView.layer.cornerRadius = 118
-        
         case 3: //Поворот на 180 градусов.
             UIView.animate(withDuration: 2, delay: 0, options: .preferredFramesPerSecond30,
                            animations: {
                             self.pinkView.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
                            }, completion: nil)
-            
         case 4: //«Исчезание».
             UIView.animate(withDuration: 2, animations: {
                 self.pinkView.alpha = 0
             }) {(isCompleted) in self.pinkView.alpha = 1
             }
         case 5: //Сначала увеличение в два раза, потом анимированное уменьшение обратно.
-            
             UIView.animate(withDuration: 2, delay: 0, animations: {
                 self.pinkView.transform = CGAffineTransform(scaleX: 2, y: 2)
             }){(isCompleted) in self.pinkView.transform = CGAffineTransform(scaleX: 1, y: 1)
             }
-            
         case 6: //Бесконечную анимацию поворота
-            UIView.animate(withDuration: 2, delay: 0, options: [ .repeat, .preferredFramesPerSecond60], animations: {
-                self.pinkView.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
-            })
+            let animation = CABasicAnimation(keyPath: "transform.rotation")
+            animation.fromValue = NSNumber(value: 0)
+            animation.toValue = NSNumber(value:Float.pi * 2.0)
+            animation.duration = 2.0
+            animation.repeatCount = Float.infinity
+            pinkView.layer.add(animation, forKey: "transform.rotation")
         default:
             break
         }
