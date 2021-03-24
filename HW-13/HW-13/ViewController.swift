@@ -34,29 +34,50 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         numberArray = [oneLabel, twoLabel,threeLabel,fourLabel,fiveLabel,sixLabel,sevenLabel]
         pinkView.alpha = 1
+        }
+    
+    extension numberArray {
+        public subscript(safeIndex index: Int) -> Element? {
+            guard index >= 0, index < endIndex else {
+                return nil
+            }
+            return self[index]
+        }
     }
     
     @IBAction func nextButton(_ sender: UIButton) {
+        
         self.buttonsPressed.append(sender)
-        if buttonsPressed.count == 1 {
-            self.numberArray[index].textColor = UIColor.blue
-        } else {
-            self.index = self.index == self.numberArray.count-1 ? 0 : self.index + 1
-            self.numberArray[index].textColor = UIColor.blue
-        }
-        changeView()
+                self.index = min(index+1, self.numberArray.count-1)
+                self.numberArray[safeIndex: index]?.textColor = UIColor.blue
+
+                changeView()
+//        self.buttonsPressed.append(sender)
+//        if buttonsPressed.count == 1 {
+//            self.numberArray[index].textColor = UIColor.blue
+//        } else {
+//            self.index = self.index == self.numberArray.count-1 ? 0 : self.index + 1
+//            self.numberArray[index].textColor = UIColor.blue
+//        }
+//        changeView()
         }
     
     @IBAction func previousButton(_ sender: UIButton) {
         self.buttonsPressed.append(sender)
-        if buttonsPressed.count == 1 {
-            self.index = self.numberArray.count - 1
-            self.numberArray[index].textColor = UIColor.red
-         } else {
-            self.index = self.index == 0 ? self.numberArray.count - 1 : self.index - 1
-            self.numberArray[index].textColor = UIColor.red
-        }
-        changeView()
+                
+                self.index = max(0, index-1)
+        self.numberArray[safeIndex: index]?.textColor = UIColor.red
+                
+                changeView()
+//        self.buttonsPressed.append(sender)
+//        if buttonsPressed.count == 1 {
+//            self.index = self.numberArray.count - 1
+//            self.numberArray[index].textColor = UIColor.red
+//         } else {
+//            self.index = self.index == 0 ? self.numberArray.count - 1 : self.index - 1
+//            self.numberArray[index].textColor = UIColor.red
+//        }
+//        changeView()
     }
     
     func changeView() {
