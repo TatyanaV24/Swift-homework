@@ -23,7 +23,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="previousButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0b3-9R-jIV"/>
+                                    <action selector="actionPrevious:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6NJ-ag-HVT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lB6-Bo-CcL">
@@ -33,7 +33,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JaN-kv-knh"/>
+                                    <action selector="actionNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IM9-5P-LgZ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1n-Qj-oCw">
@@ -114,16 +114,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="fiveLabel" destination="oZJ-ne-Jc8" id="xYi-md-iS6"/>
-                        <outlet property="fourLabel" destination="lYc-Nf-Hft" id="4E9-av-9lF"/>
-                        <outlet property="nextButton" destination="lB6-Bo-CcL" id="mGg-01-LZX"/>
-                        <outlet property="oneLabel" destination="g1n-Qj-oCw" id="wBV-UQ-Ja0"/>
-                        <outlet property="pinkView" destination="rP2-uT-BYX" id="nB8-pd-4BD"/>
-                        <outlet property="previousButton" destination="f4c-ZH-rBQ" id="bAP-xa-BGd"/>
-                        <outlet property="sevenLabel" destination="bDt-AU-7d8" id="Ee9-Gd-Z4l"/>
-                        <outlet property="sixLabel" destination="6g4-yx-yfZ" id="fzi-6f-FuB"/>
-                        <outlet property="threeLabel" destination="mLO-nF-Ddn" id="wb1-hU-6vZ"/>
-                        <outlet property="twoLabel" destination="LDu-8s-3XK" id="Wfd-f3-vwB"/>
+                        <outlet property="fiveLabel" destination="oZJ-ne-Jc8" id="tS6-aM-FTu"/>
+                        <outlet property="fourLabel" destination="lYc-Nf-Hft" id="tPe-st-BLh"/>
+                        <outlet property="oneLabel" destination="g1n-Qj-oCw" id="3Jq-ys-lOm"/>
+                        <outlet property="pinkView" destination="rP2-uT-BYX" id="DpZ-5D-Clf"/>
+                        <outlet property="sevenLabel" destination="bDt-AU-7d8" id="M97-36-Qkr"/>
+                        <outlet property="sixLabel" destination="6g4-yx-yfZ" id="6Ck-05-AsS"/>
+                        <outlet property="threeLabel" destination="mLO-nF-Ddn" id="9gd-Ye-yHA"/>
+                        <outlet property="twoLabel" destination="LDu-8s-3XK" id="RsH-yP-VQY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
