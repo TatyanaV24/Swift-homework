@@ -19,11 +19,7 @@ class RealmViewController: UIViewController, UITableViewDelegate, UITableViewDat
      
     @IBOutlet weak var toDoTable: UITableView!
     
-    var toDoList: Results<Task>{
-        get {
-            return realm.objects(Task.self)
-        }
-    }
+    var toDoList: Results<Task>!
 
     private let realm = try! Realm()
     
@@ -31,6 +27,7 @@ class RealmViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         toDoTable.delegate = self
         toDoTable.dataSource = self
+        toDoList = realm.objects(Task.self)
     }
     
     //MARK - Add DataSource Methods

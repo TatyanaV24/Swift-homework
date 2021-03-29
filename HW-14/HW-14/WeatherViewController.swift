@@ -9,6 +9,20 @@ import UIKit
 import Alamofire
 import RealmSwift
 
+class ObjectWeather: Object {
+    
+    @objc dynamic var cityName = ""
+    @objc dynamic var temperature = 0
+    @objc dynamic var feelsLike = 0
+    @objc dynamic var pressureDay = 0
+    @objc dynamic var humidityDay = 0
+    @objc dynamic var id = 2
+    
+    override static func primaryKey() -> String? {
+            return "id"
+        }
+}
+
 class WeatherViewController: UIViewController {
 
     @IBOutlet weak var cityLabel: UILabel!
@@ -19,27 +33,18 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var alamTableView: UITableView!
     
     var weatherDate = WeatherData()
+    let objw = ObjectWeather()
 //    var list = ListW()
 //    var mode:[FeatherData] = []
+    private let uirealm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        parsing()
+        
 //        alamTableView.delegate = self
 //        alamTableView.dataSource = self
-        
-        AF.request ("http://api.openweathermap.org/data/2.5/weather?q=Moscow&units=metric&appid=ea5e2d3c2f5e9ec322593ff4b368cafc").responseDecodable(of: WeatherData.self) { response in
-            print(response)
-            
-            if let result = response.value {
-                let JSON = result
-                print(JSON)
-                self.weatherDate = JSON
-                DispatchQueue.main.async {
-                    self.updateView()
-                }
-            }
-        }
         
 //        AF.request ("http://api.openweathermap.org/data/2.5/forecast?q=Moscow&units=metric&appid=ea5e2d3c2f5e9ec322593ff4b368cafc").responseDecodable(of: ListW.self) { response in
 //            print(response)
@@ -66,11 +71,38 @@ class WeatherViewController: UIViewController {
     }
     
     func updateView() {
-        cityLabel.text = weatherDate.name
-        tempLabel.text = weatherDate.main.temp.description + "ºC"
-        feelsLabel.text = weatherDate.main.feels_like.description + "ºC"
-        pressLabel.text = weatherDate.main.pressure.description + " мм.рт.ст"
-        humLabel.text = weatherDate.main.humidity.description + "%"
+        cityLabel.text = objw.cityName
+        tempLabel.text = objw.temperature.description + "ºC"
+        feelsLabel.text = objw.feelsLike.description + "ºC"
+        pressLabel.text = objw.pressureDay.description + " мм.рт.ст"
+        humLabel.text = objw.humidityDay.description + "%"
+    }
+    
+    func parsing(){
+        
+        AF.request ("http://api.openweathermap.org/data/2.5/weather?q=Moscow&units=metric&appid=ea5e2d3c2f5e9ec322593ff4b368cafc").responseDecodable(of: WeatherData.self) { response in
+            print(response)
+            
+            if let result = response.value {
+                self.weatherDate = result
+                self.objw.cityName = self.weatherDate.name
+                self.objw.temperature = Int(self.weatherDate.main.temp)
+                self.objw.feelsLike = Int(self.weatherDate.main.feels_like)
+                self.objw.pressureDay = self.weatherDate.main.pressure
+                self.objw.humidityDay = self.weatherDate.main.humidity
+                let obar = self.uirealm.object(ofType: ObjectWeather.self, forPrimaryKey: 2)
+                
+                DispatchQueue.main.async {
+                    if obar != obar {
+                        try! self.uirealm.write{
+                            self.uirealm.add(self.objw)
+                        }
+                    } else {
+                        self.updateView()
+                    }
+                }
+            }
+        }
     }
 }
 
