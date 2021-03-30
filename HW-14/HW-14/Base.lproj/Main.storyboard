@@ -156,59 +156,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Температура сейчас -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRN-ah-XcO">
-                                <rect key="frame" x="52" y="140.5" width="195" height="19.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Температура сейчас -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRN-ah-XcO">
+                                <rect key="frame" x="52" y="140.5" width="195" height="21"/>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
                                 <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ощущается как " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGO-tE-9WW">
-                                <rect key="frame" x="52" y="170" width="147" height="20"/>
+                                <rect key="frame" x="52" y="171.5" width="147" height="19"/>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
                                 <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Давление" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEw-Km-QkB">
-                                <rect key="frame" x="52" y="200" width="89.5" height="20"/>
+                                <rect key="frame" x="52" y="200.5" width="89.5" height="20"/>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
                                 <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Влажность" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LyV-vJ-kSC">
-                                <rect key="frame" x="52" y="230" width="101" height="20"/>
+                                <rect key="frame" x="52" y="230.5" width="130" height="19"/>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
                                 <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15ºС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdZ-eQ-Mmy">
-                                <rect key="frame" x="257" y="140.5" width="40.5" height="20"/>
+                                <rect key="frame" x="257" y="141" width="83" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="aEh-c3-r2J"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="83" id="B8s-NU-nyQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
                                 <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vw5-hV-kbf">
-                                <rect key="frame" x="151.5" y="199.5" width="32.5" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vw5-hV-kbf">
+                                <rect key="frame" x="149.5" y="202" width="100.5" height="18"/>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
                                 <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SsI-Ea-OzO">
-                                <rect key="frame" x="163" y="229.5" width="30" height="20"/>
+                                <rect key="frame" x="192" y="230" width="30" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="3sq-a6-jnf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
                                 <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Погода на неделю" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swj-Ya-QSk">
-                                <rect key="frame" x="87" y="279.5" width="256" height="29"/>
+                                <rect key="frame" x="87" y="281" width="256" height="29"/>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="25"/>
                                 <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NEM-rw-uIl">
-                                <rect key="frame" x="0.0" y="323.5" width="414" height="489.5"/>
+                                <rect key="frame" x="0.0" y="325" width="414" height="488"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AlamofireTableViewCell" rowHeight="126" id="zSC-dt-uz0" customClass="AlamofireTableViewCell" customModule="HW_14" customModuleProvider="target">
@@ -327,8 +330,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="23ºС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRn-4G-Qrw">
-                                <rect key="frame" x="209" y="170.5" width="43" height="19"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="23ºС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRn-4G-Qrw">
+                                <rect key="frame" x="209" y="171" width="43" height="20"/>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
                                 <color key="textColor" red="0.09400690347" green="0.28385055069999998" blue="0.53326410059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -343,45 +346,48 @@
                         <viewLayoutGuide key="safeArea" id="Sej-Xd-jLv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Sej-Xd-jLv" firstAttribute="trailing" secondItem="OdZ-eQ-Mmy" secondAttribute="trailing" constant="74" id="109-9J-5Gz"/>
                             <constraint firstItem="oRN-ah-XcO" firstAttribute="top" secondItem="TnC-RW-hVT" secondAttribute="bottom" constant="26" id="2uB-9e-shg"/>
-                            <constraint firstItem="vw5-hV-kbf" firstAttribute="top" secondItem="vRn-4G-Qrw" secondAttribute="bottom" constant="10" id="5XI-Bk-IIx"/>
-                            <constraint firstItem="Sej-Xd-jLv" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SsI-Ea-OzO" secondAttribute="trailing" symbolic="YES" id="6u9-m4-DBw"/>
+                            <constraint firstItem="vw5-hV-kbf" firstAttribute="top" secondItem="vRn-4G-Qrw" secondAttribute="bottom" constant="11" id="5XI-Bk-IIx"/>
                             <constraint firstItem="wGO-tE-9WW" firstAttribute="leading" secondItem="LyV-vJ-kSC" secondAttribute="leading" id="71V-6n-XfU"/>
                             <constraint firstItem="LyV-vJ-kSC" firstAttribute="top" secondItem="yEw-Km-QkB" secondAttribute="bottom" constant="10" id="7g4-al-mC8"/>
                             <constraint firstItem="wGO-tE-9WW" firstAttribute="leading" secondItem="yEw-Km-QkB" secondAttribute="leading" id="7rS-0U-Qfj"/>
                             <constraint firstItem="wGO-tE-9WW" firstAttribute="top" secondItem="oRN-ah-XcO" secondAttribute="bottom" constant="10" id="8rC-fG-WkJ"/>
                             <constraint firstItem="swj-Ya-QSk" firstAttribute="leading" secondItem="Sej-Xd-jLv" secondAttribute="leading" constant="87" id="AS2-V8-a5E"/>
-                            <constraint firstItem="swj-Ya-QSk" firstAttribute="top" secondItem="SsI-Ea-OzO" secondAttribute="bottom" constant="30" id="B9t-fX-UQL"/>
                             <constraint firstItem="yEw-Km-QkB" firstAttribute="leading" secondItem="Sej-Xd-jLv" secondAttribute="leading" constant="52" id="Bev-Ip-dLs"/>
+                            <constraint firstItem="OdZ-eQ-Mmy" firstAttribute="centerY" secondItem="oRN-ah-XcO" secondAttribute="centerY" id="DLD-f4-3PW"/>
+                            <constraint firstItem="SsI-Ea-OzO" firstAttribute="baseline" secondItem="LyV-vJ-kSC" secondAttribute="firstBaseline" id="FIA-aU-xqU"/>
                             <constraint firstItem="NEM-rw-uIl" firstAttribute="leading" secondItem="Sej-Xd-jLv" secondAttribute="leading" id="FSc-Lm-AI9"/>
                             <constraint firstItem="TnC-RW-hVT" firstAttribute="centerX" secondItem="49t-g6-0EV" secondAttribute="centerX" id="FgO-GW-59R"/>
-                            <constraint firstItem="OdZ-eQ-Mmy" firstAttribute="top" secondItem="TnC-RW-hVT" secondAttribute="bottom" constant="26" id="HWb-8F-dIQ"/>
-                            <constraint firstItem="Sej-Xd-jLv" firstAttribute="trailing" secondItem="vw5-hV-kbf" secondAttribute="trailing" constant="230" id="HiU-uU-qD8"/>
+                            <constraint firstItem="Sej-Xd-jLv" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="vw5-hV-kbf" secondAttribute="trailing" constant="164" id="HiU-uU-qD8"/>
                             <constraint firstItem="wGO-tE-9WW" firstAttribute="baseline" secondItem="vRn-4G-Qrw" secondAttribute="firstBaseline" id="IV8-jD-aOT"/>
-                            <constraint firstItem="vw5-hV-kbf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yEw-Km-QkB" secondAttribute="trailing" constant="8" symbolic="YES" id="JSj-sz-h6A"/>
+                            <constraint firstItem="SsI-Ea-OzO" firstAttribute="top" secondItem="vw5-hV-kbf" secondAttribute="bottom" constant="10" id="JJW-uS-l0B"/>
+                            <constraint firstItem="vw5-hV-kbf" firstAttribute="leading" secondItem="yEw-Km-QkB" secondAttribute="trailing" constant="8" symbolic="YES" id="JSj-sz-h6A"/>
                             <constraint firstItem="yEw-Km-QkB" firstAttribute="top" secondItem="wGO-tE-9WW" secondAttribute="bottom" constant="10" id="Kya-Hb-lqw"/>
-                            <constraint firstItem="LyV-vJ-kSC" firstAttribute="leading" secondItem="Sej-Xd-jLv" secondAttribute="leading" constant="52" id="MYI-L3-Fp6"/>
+                            <constraint firstItem="LyV-vJ-kSC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Sej-Xd-jLv" secondAttribute="leading" id="MYI-L3-Fp6"/>
                             <constraint firstItem="wGO-tE-9WW" firstAttribute="leading" secondItem="Sej-Xd-jLv" secondAttribute="leading" constant="52" id="Moj-vZ-0Nn"/>
                             <constraint firstItem="wGO-tE-9WW" firstAttribute="leading" secondItem="oRN-ah-XcO" secondAttribute="leading" id="PuA-jk-j9J"/>
+                            <constraint firstItem="SsI-Ea-OzO" firstAttribute="leading" secondItem="LyV-vJ-kSC" secondAttribute="trailing" constant="10" id="Pv5-OT-zRA"/>
                             <constraint firstItem="oRN-ah-XcO" firstAttribute="leading" secondItem="Sej-Xd-jLv" secondAttribute="leading" constant="52" id="Sim-4Y-6eD"/>
+                            <constraint firstItem="swj-Ya-QSk" firstAttribute="top" secondItem="SsI-Ea-OzO" secondAttribute="bottom" constant="31" id="Y4y-4A-d4O"/>
+                            <constraint firstItem="SsI-Ea-OzO" firstAttribute="centerX" secondItem="TnC-RW-hVT" secondAttribute="centerX" id="YnU-h9-NSB"/>
                             <constraint firstItem="TnC-RW-hVT" firstAttribute="top" secondItem="Sej-Xd-jLv" secondAttribute="top" constant="25" id="abs-JQ-byG"/>
-                            <constraint firstItem="SsI-Ea-OzO" firstAttribute="leading" secondItem="LyV-vJ-kSC" secondAttribute="trailing" constant="10" id="baA-gi-uH5"/>
-                            <constraint firstItem="vRn-4G-Qrw" firstAttribute="top" secondItem="OdZ-eQ-Mmy" secondAttribute="bottom" constant="10" id="e8p-Zt-ZeA"/>
-                            <constraint firstItem="TnC-RW-hVT" firstAttribute="leading" secondItem="Sej-Xd-jLv" secondAttribute="leading" constant="126" id="eeb-kY-5yG"/>
+                            <constraint firstItem="OdZ-eQ-Mmy" firstAttribute="top" secondItem="TnC-RW-hVT" secondAttribute="bottom" constant="26.5" id="ePa-Fc-GRh"/>
+                            <constraint firstItem="vRn-4G-Qrw" firstAttribute="top" secondItem="OdZ-eQ-Mmy" secondAttribute="bottom" constant="10" id="frf-zr-A6s"/>
                             <constraint firstItem="wGO-tE-9WW" firstAttribute="top" secondItem="oRN-ah-XcO" secondAttribute="bottom" constant="10" id="glz-b3-Wh3"/>
+                            <constraint firstItem="OdZ-eQ-Mmy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oRN-ah-XcO" secondAttribute="trailing" symbolic="YES" id="gty-Wi-ONy"/>
+                            <constraint firstItem="SsI-Ea-OzO" firstAttribute="top" secondItem="49t-g6-0EV" secondAttribute="top" constant="230" id="iIl-Rq-RRf"/>
                             <constraint firstItem="yEw-Km-QkB" firstAttribute="top" secondItem="wGO-tE-9WW" secondAttribute="bottom" constant="10" id="iuc-MX-svQ"/>
                             <constraint firstItem="LyV-vJ-kSC" firstAttribute="top" secondItem="yEw-Km-QkB" secondAttribute="bottom" constant="10" id="kbO-8a-27y"/>
                             <constraint firstItem="wGO-tE-9WW" firstAttribute="centerY" secondItem="vRn-4G-Qrw" secondAttribute="centerY" id="kpl-xk-LyB"/>
                             <constraint firstItem="NEM-rw-uIl" firstAttribute="bottom" secondItem="Sej-Xd-jLv" secondAttribute="bottom" id="m32-JD-0QH"/>
                             <constraint firstItem="oRN-ah-XcO" firstAttribute="top" secondItem="TnC-RW-hVT" secondAttribute="bottom" constant="26" id="oeN-tA-BvK"/>
+                            <constraint firstItem="SsI-Ea-OzO" firstAttribute="centerY" secondItem="LyV-vJ-kSC" secondAttribute="centerY" id="rcg-VO-P1n"/>
                             <constraint firstItem="NEM-rw-uIl" firstAttribute="top" secondItem="swj-Ya-QSk" secondAttribute="bottom" constant="15" id="sTy-xg-09e"/>
-                            <constraint firstItem="Sej-Xd-jLv" firstAttribute="trailing" secondItem="vRn-4G-Qrw" secondAttribute="trailing" constant="162" id="stK-SC-Rpu"/>
+                            <constraint firstItem="Sej-Xd-jLv" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="vRn-4G-Qrw" secondAttribute="trailing" constant="162" id="stK-SC-Rpu"/>
                             <constraint firstAttribute="trailing" secondItem="NEM-rw-uIl" secondAttribute="trailing" id="w9A-hC-auW"/>
-                            <constraint firstItem="OdZ-eQ-Mmy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oRN-ah-XcO" secondAttribute="trailing" symbolic="YES" id="wXk-Ft-4sq"/>
-                            <constraint firstItem="vRn-4G-Qrw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wGO-tE-9WW" secondAttribute="trailing" constant="8" symbolic="YES" id="xjb-8r-LfZ"/>
-                            <constraint firstItem="SsI-Ea-OzO" firstAttribute="top" secondItem="vw5-hV-kbf" secondAttribute="bottom" constant="10" id="yc9-gm-KTZ"/>
+                            <constraint firstItem="vRn-4G-Qrw" firstAttribute="leading" secondItem="wGO-tE-9WW" secondAttribute="trailing" constant="10" id="xjb-8r-LfZ"/>
                             <constraint firstItem="NEM-rw-uIl" firstAttribute="centerX" secondItem="swj-Ya-QSk" secondAttribute="centerX" constant="-8" id="ygG-RE-TRL"/>
-                            <constraint firstItem="Sej-Xd-jLv" firstAttribute="trailing" secondItem="OdZ-eQ-Mmy" secondAttribute="trailing" constant="116.5" id="ziy-4G-lkR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="4" id="Fv9-x9-YOs"/>
@@ -396,7 +402,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uaB-cG-ugV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1841" y="575"/>
+            <point key="canvasLocation" x="1840.5797101449277" y="574.55357142857144"/>
         </scene>
         <!--1-->
         <scene sceneID="sOU-r1-H2r">
