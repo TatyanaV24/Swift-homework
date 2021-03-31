@@ -8,7 +8,7 @@ sort
 
 // 4. Переведите массив чисел в массив строк с помощью функции Map.
 
-let transfer = number.map{String(Int($0))}
+let transfer = number.map{String($0)}
 transfer
 
 //5. Переведите массив строк с именами людей в одну строку, содержащую все эти имена, с помощью функции Reduce.
@@ -23,12 +23,13 @@ func voidFunc() -> String {
     return "Функциональное программирование"
 }
 
-func printVoid(void: () -> String){
-    
-    sleep(2)
-    print("\(void())")
+func printVoid(void: () -> String) {
+    let result = void()
+    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        print(result)
     }
-
+}
+printVoid(void: voidFunc)
 
 //7. Напишите функцию, которая принимает в себя две функции и возвращает функцию, которая при вызове выполнит первые две функции.
 
