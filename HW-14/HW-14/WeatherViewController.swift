@@ -36,7 +36,6 @@ class WeatherViewController: UIViewController {
     
     var weatherDate = WeatherData()
     let objw = ObjectWeatherDay()
-//    var list = ListW()
     var mode:[FeatherData] = []
     var severalDay:[ObjectWeatherSeveralDay] = []
     
@@ -49,7 +48,6 @@ class WeatherViewController: UIViewController {
         alamTableView.dataSource = self
         
         parsing()
-        dataForTable()
     }
     
     func updateView() {
@@ -58,8 +56,6 @@ class WeatherViewController: UIViewController {
         feelsLabel.text = objw.feelsLike.description + "ºC"
         pressLabel.text = objw.pressureDay.description + " мм.рт.ст"
         humLabel.text = objw.humidityDay.description + "%"
-        
-        
     }
     
     func parsing(){
@@ -87,9 +83,9 @@ class WeatherViewController: UIViewController {
                 }
             }
         }
-        
+        // парсинг прогноза на несколько дней
         AF.request ("http://api.openweathermap.org/data/2.5/forecast?q=Moscow&units=metric&appid=ea5e2d3c2f5e9ec322593ff4b368cafc").responseDecodable(of: ListW.self) { response in
-//            print(response)
+            print(response)
             
             if let result = response.value {
                 let json = result
@@ -103,38 +99,24 @@ class WeatherViewController: UIViewController {
                         if !uniqueDates.contains(formattedDate) {
                             uniqueDates.append(formattedDate)
                             self.mode.append(data)
-                           
-                             
-                            for index in 0 ..< self.severalDay.count{
-                                self.severalDay[index].day = self.mode[index].dt
-                                self.severalDay[index].averTemp = Int(self.mode[index].main.temp)
-                                self.severalDay[index].maxTemp = Int(self.mode[index].main.temp_max)
-                                self.severalDay[index].minTemp = Int(self.mode[index].main.temp_min)
-                                print(self.severalDay[index].day)
+                            
+                            let newObject = ObjectWeatherSeveralDay()
+                            newObject.day = data.dt
+                            newObject.averTemp = Int(data.main.temp)
+                            newObject.maxTemp = Int(data.main.temp_max)
+                            newObject.minTemp = Int(data.main.temp_min)
+                            self.severalDay.append(newObject)
+                            if self.severalDay.isEmpty {
+                                try! self.uirealm.write {
+                                    self.uirealm.add(self.severalDay)
+                                }
                             }
+                            self.alamTableView.reloadData()
                         }
-                        
                     }
                 }
             }
         }
-    }
- 
-    func dataForTable() {
-//        for (index, _) in severalDay.enumerated(){
-//            severalDay[index].day = mode[index].dt
-//            severalDay[index].averTemp = Int(mode[index].main.temp)
-//            severalDay[index].maxTemp = Int(mode[index].main.temp_max)
-//            severalDay[index].minTemp = Int(mode[index].main.temp_min)
-//        }
-        if severalDay.isEmpty {
-            try! uirealm.write {
-                uirealm.add(severalDay)
-            }
-        } else {
-            uirealm.objects(ObjectWeatherSeveralDay.self)
-        }
-        self.alamTableView.reloadData()
     }
 }
 

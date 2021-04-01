@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 
         Persistance.shared.userName = nameTextField.text
         Persistance.shared.userSurname = surnameTextField.text
-        //       print(Persistance.shared.userName!)
-        //       print(Persistance.shared.userSurname!)
+               print(Persistance.shared.userName!)
+               print(Persistance.shared.userSurname!)
     }
 }
