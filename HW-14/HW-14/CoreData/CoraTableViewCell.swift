@@ -8,8 +8,6 @@
 import UIKit
 
 class CoraTableViewCell: UITableViewCell {
-
-
-    @IBOutlet weak var textTask: UILabel!
     
+    @IBOutlet weak var textTask: UILabel!
 }

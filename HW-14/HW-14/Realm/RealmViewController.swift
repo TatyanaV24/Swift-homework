@@ -7,51 +7,37 @@
 //
 
 import UIKit
-import RealmSwift
-
-// Model
-class Task: Object {
-    @objc dynamic var name = ""
-    @objc dynamic var isCompleted = false
-}
 
 class RealmViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var toDoTable: UITableView!
     
-    var toDoList: Results<Task>!
-    
-    private let realm = try! Realm()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         toDoTable.delegate = self
         toDoTable.dataSource = self
-        toDoList = realm.objects(Task.self)
     }
     
     //MARK - Add DataSource Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return toDoList.count
+        return RealManager.sharedInstance.getDataFromDB().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TaskViewCell
-        let item = toDoList[indexPath.row]
+        let item = RealManager.sharedInstance.getDataFromDB()[indexPath.row] as Task
         cell.TaskLabel.text = item.name
-        
         cell.accessoryType = item.isCompleted == true ? .checkmark : .none
+        
         return cell
     }
     
     //MARK - Add Delegate Methods
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = toDoList[indexPath.row]
+        let item = RealManager.sharedInstance.getDataFromDB()[indexPath.row] as Task
+        RealManager.sharedInstance.changeChekmark(object: item)
         
-        try! self.realm.write({
-            item.isCompleted = !item.isCompleted
-        })
         tableView.reloadRows(at: [indexPath], with: .automatic)
     }
     
@@ -61,11 +47,9 @@ class RealmViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let item = toDoList[indexPath.row]
+            let item = RealManager.sharedInstance.getDataFromDB()[indexPath.row] as Task
+            RealManager.sharedInstance.deleteFromDb(object: item)
             
-            try! realm.write({
-                self.realm.delete(item)
-            })
             tableView.deleteRows(at: [indexPath], with: .automatic)
         } 
     }
@@ -84,12 +68,10 @@ class RealmViewController: UIViewController, UITableViewDelegate, UITableViewDat
             let newTask = Task()
             newTask.name = newItem.text!
             newTask.isCompleted = false
+            RealManager.sharedInstance.addData(object: newTask)
             
-            try! self.realm.write({
-                self.realm.add(newTask)
-                
-                self.toDoTable.insertRows(at: [IndexPath.init(row: self.toDoList.count-1, section: 0)], with: .automatic)
-            })
+            self.toDoTable.insertRows(at: [IndexPath.init(row: RealManager.sharedInstance.getDataFromDB().count-1, section: 0)], with: .automatic)
+            
         }
         alertController.addAction(alertCreate)
         present(alertController, animated: true, completion: nil)

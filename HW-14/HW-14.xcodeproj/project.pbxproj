@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF22ECF62617838B004800F7 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22ECF52617838B004800F7 /* RealmModel.swift */; };
+		BF867BDE26171B16003D7FDF /* RealManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF867BDD26171B16003D7FDF /* RealManager.swift */; };
 		BF8751F526088A6100C52F00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8751F426088A6100C52F00 /* AppDelegate.swift */; };
 		BF8751F726088A6100C52F00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8751F626088A6100C52F00 /* SceneDelegate.swift */; };
 		BF8751F926088A6100C52F00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8751F826088A6100C52F00 /* ViewController.swift */; };
@@ -23,12 +25,17 @@
 		BF875271260BB40400C52F00 /* ModelWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF875270260BB40400C52F00 /* ModelWeather.swift */; };
 		BF875274260BB4F500C52F00 /* AlamofireTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF875273260BB4F500C52F00 /* AlamofireTableViewCell.swift */; };
 		BF875277260BBC4100C52F00 /* OneDayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF875276260BBC4100C52F00 /* OneDayModel.swift */; };
+		BFF6BFD52618AC2D009D50D1 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6BFD42618AC2D009D50D1 /* CoreDataManager.swift */; };
+		BFF6BFD82618CFC7009D50D1 /* WRModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6BFD72618CFC7009D50D1 /* WRModel.swift */; };
+		BFF6BFDC2618D022009D50D1 /* WRManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6BFDB2618D022009D50D1 /* WRManager.swift */; };
 		C6B23BCA9E7C1C1F49F3A4C8 /* Pods_HW_14.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A7DB93C17EB29E282974E24 /* Pods_HW_14.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A7DB93C17EB29E282974E24 /* Pods_HW_14.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HW_14.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2A9B97E9B96BEF541805B3 /* Pods-HW-14.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW-14.debug.xcconfig"; path = "Target Support Files/Pods-HW-14/Pods-HW-14.debug.xcconfig"; sourceTree = "<group>"; };
+		BF22ECF52617838B004800F7 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		BF867BDD26171B16003D7FDF /* RealManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealManager.swift; sourceTree = "<group>"; };
 		BF8751F126088A6100C52F00 /* HW-14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW-14.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8751F426088A6100C52F00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF8751F626088A6100C52F00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +54,9 @@
 		BF875270260BB40400C52F00 /* ModelWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelWeather.swift; sourceTree = "<group>"; };
 		BF875273260BB4F500C52F00 /* AlamofireTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireTableViewCell.swift; sourceTree = "<group>"; };
 		BF875276260BBC4100C52F00 /* OneDayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneDayModel.swift; sourceTree = "<group>"; };
+		BFF6BFD42618AC2D009D50D1 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		BFF6BFD72618CFC7009D50D1 /* WRModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRModel.swift; sourceTree = "<group>"; };
+		BFF6BFDB2618D022009D50D1 /* WRManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRManager.swift; sourceTree = "<group>"; };
 		F82BA5346013971AF1199F36 /* Pods-HW-14.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW-14.release.xcconfig"; path = "Target Support Files/Pods-HW-14/Pods-HW-14.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +89,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BF22ECF1261782A5004800F7 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				BF22ECF52617838B004800F7 /* RealmModel.swift */,
+				BF867BDD26171B16003D7FDF /* RealManager.swift */,
+				BF87520D2608A97A00C52F00 /* RealmViewController.swift */,
+				BF87521A2609EC7600C52F00 /* TaskViewCell.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		BF22ECF226178301004800F7 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				BF8751F826088A6100C52F00 /* ViewController.swift */,
+				BF8752092608905B00C52F00 /* Persistance.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		BF22ECF32617831A004800F7 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BFF6BFD42618AC2D009D50D1 /* CoreDataManager.swift */,
+				BF87522B260B3EFD00C52F00 /* CoreDataViewController.swift */,
+				BF875261260B6D9300C52F00 /* CoraTableViewCell.swift */,
+				BF875252260B43FB00C52F00 /* HW-14.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		BF22ECF426178340004800F7 /* WeatherRealmAlamofire */ = {
+			isa = PBXGroup;
+			children = (
+				BF875270260BB40400C52F00 /* ModelWeather.swift */,
+				BF875276260BBC4100C52F00 /* OneDayModel.swift */,
+				BF87526A260BA9D800C52F00 /* WeatherViewController.swift */,
+				BFF6BFD72618CFC7009D50D1 /* WRModel.swift */,
+				BFF6BFDB2618D022009D50D1 /* WRManager.swift */,
+				BF875273260BB4F500C52F00 /* AlamofireTableViewCell.swift */,
+			);
+			path = WeatherRealmAlamofire;
+			sourceTree = "<group>";
+		};
 		BF8751E826088A6100C52F00 = {
 			isa = PBXGroup;
 			children = (
@@ -100,23 +154,16 @@
 		BF8751F326088A6100C52F00 /* HW-14 */ = {
 			isa = PBXGroup;
 			children = (
+				BF22ECF426178340004800F7 /* WeatherRealmAlamofire */,
+				BF22ECF32617831A004800F7 /* CoreData */,
+				BF22ECF226178301004800F7 /* UserDefaults */,
+				BF22ECF1261782A5004800F7 /* Realm */,
 				BF8751F426088A6100C52F00 /* AppDelegate.swift */,
 				BF8751F626088A6100C52F00 /* SceneDelegate.swift */,
-				BF8751F826088A6100C52F00 /* ViewController.swift */,
-				BF87520D2608A97A00C52F00 /* RealmViewController.swift */,
-				BF87521A2609EC7600C52F00 /* TaskViewCell.swift */,
-				BF8752092608905B00C52F00 /* Persistance.swift */,
 				BF8751FA26088A6100C52F00 /* Main.storyboard */,
-				BF875270260BB40400C52F00 /* ModelWeather.swift */,
-				BF875276260BBC4100C52F00 /* OneDayModel.swift */,
-				BF87526A260BA9D800C52F00 /* WeatherViewController.swift */,
-				BF875273260BB4F500C52F00 /* AlamofireTableViewCell.swift */,
-				BF87522B260B3EFD00C52F00 /* CoreDataViewController.swift */,
-				BF875261260B6D9300C52F00 /* CoraTableViewCell.swift */,
 				BF8751FD26088A6400C52F00 /* Assets.xcassets */,
 				BF8751FF26088A6400C52F00 /* LaunchScreen.storyboard */,
 				BF87520226088A6400C52F00 /* Info.plist */,
-				BF875252260B43FB00C52F00 /* HW-14.xcdatamodeld */,
 			);
 			path = "HW-14";
 			sourceTree = "<group>";
@@ -235,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF6BFD82618CFC7009D50D1 /* WRModel.swift in Sources */,
 				BF87520E2608A97A00C52F00 /* RealmViewController.swift in Sources */,
 				BF87526B260BA9D800C52F00 /* WeatherViewController.swift in Sources */,
 				BF875274260BB4F500C52F00 /* AlamofireTableViewCell.swift in Sources */,
@@ -244,9 +292,13 @@
 				BF875254260B43FB00C52F00 /* HW-14.xcdatamodeld in Sources */,
 				BF87522C260B3EFD00C52F00 /* CoreDataViewController.swift in Sources */,
 				BF87520A2608905B00C52F00 /* Persistance.swift in Sources */,
+				BFF6BFDC2618D022009D50D1 /* WRManager.swift in Sources */,
+				BF867BDE26171B16003D7FDF /* RealManager.swift in Sources */,
 				BF875262260B6D9300C52F00 /* CoraTableViewCell.swift in Sources */,
 				BF8751F526088A6100C52F00 /* AppDelegate.swift in Sources */,
 				BF875271260BB40400C52F00 /* ModelWeather.swift in Sources */,
+				BF22ECF62617838B004800F7 /* RealmModel.swift in Sources */,
+				BFF6BFD52618AC2D009D50D1 /* CoreDataManager.swift in Sources */,
 				BF8751F726088A6100C52F00 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
