@@ -49,6 +49,11 @@ class WRManager {
         }
     }
 
+    func deleteFromDb(object: ObjectWeatherDay) {
+        try! realm.write {
+            realm.delete(object)
+        }
+    }
     
     
     
