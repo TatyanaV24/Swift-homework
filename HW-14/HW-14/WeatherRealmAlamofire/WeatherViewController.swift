@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Alamofire
 
 class WeatherViewController: UIViewController {
     
@@ -19,119 +18,111 @@ class WeatherViewController: UIViewController {
     
     var weatherDate = WeatherData()
     let objw = ObjectWeatherDay()
+    
     var mode:[FeatherData] = []
     var severalDay:[ObjectWeatherSeveralDay] = []
     var resultWeather = ObjectWS()
-    let database = WRManager.sharedInstance.getDataFromDBOneDay()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //                alamTableView.delegate = self
-        //                alamTableView.dataSource = self
-       
+        alamTableView.delegate = self
+        alamTableView.dataSource = self
+        let database = WRManager.sharedInstance.getDataFromDBOneDay()
         if database.isEmpty {                                          // если бд пустая
-            parsingOneDay()
-            WRManager.sharedInstance.addDataOneDay(object: objw) // записываем данные в бд
+            updateOneDay()                                             // записываем данные в бд
         } else{
-            updateBase(sender: objw)
-//            parsingOneDay()
-//            WRManager.sharedInstance.updateAddOneDay(object: objw) // обновляем и перезаписываем данные в бд
-    }
-        }
-
-    func updateBase(sender: ObjectWeatherDay){
-        for sender in database {                                    // выводим данные из бд
-            self.cityLabel.text = sender.cityName
-            self.tempLabel.text = sender.temperature.description + "ºC"
-            self.feelsLabel.text = sender.feelsLike.description + "ºC"
-            self.pressLabel.text = sender.pressureDay.description + " мм.рт.ст"
-            self.humLabel.text = sender.humidityDay.description + "%"
+            for sender in database {                                    // выводим данные из бд
+                self.cityLabel.text = sender.cityName
+                self.tempLabel.text = sender.temperature.description + "ºC"
+                self.feelsLabel.text = sender.feelsLike.description + "ºC"
+                self.pressLabel.text = sender.pressureDay.description + " мм.рт.ст"
+                self.humLabel.text = sender.humidityDay.description + "%"
+            }
+            updateOneDay()  // обновляем и перезаписываем данные в бд
         }
     }
     
-    
-    func parsingOneDay(){
-        
-        // парсинг прогноза на один день
-        AF.request ("http://api.openweathermap.org/data/2.5/weather?q=Moscow&units=metric&appid=ea5e2d3c2f5e9ec322593ff4b368cafc").responseDecodable(of: WeatherData.self) { response in
-            print(response)
-            
-            if let result = response.value {
-                self.weatherDate = result
+    func updateOneDay(){
+        LoderAlamofire.parsingOneDay { object in
+            DispatchQueue.main.async {
+                self.weatherDate = object
                 self.objw.cityName = self.weatherDate.name
                 self.objw.temperature = Int(self.weatherDate.main.temp)
                 self.objw.feelsLike = Int(self.weatherDate.main.feels_like)
                 self.objw.pressureDay = self.weatherDate.main.pressure
                 self.objw.humidityDay = self.weatherDate.main.humidity
                 print(self.objw)
+                
+                WRManager.sharedInstance.addDataOneDay(object: self.objw)
             }
         }
     }
-//    func parsingSeveralDay(){// парсинг прогноза на несколько дней
-//            AF.request ("http://api.openweathermap.org/data/2.5/forecast?q=Moscow&units=metric&appid=ea5e2d3c2f5e9ec322593ff4b368cafc").responseDecodable(of: ListW.self) { response in
-//                print(response)
-//
-//                if let result = response.value {
-//                    let json = result
-//                    DispatchQueue.main.async {
-//                        var uniqueDates: [String] = []
-//                        let dateFormat = DateFormatter()
-//                        dateFormat.dateFormat = "MM/dd/yyyy"
-//                        json.list.forEach { (data) in
-//                            let formattedDate = dateFormat.string(from: Date(timeIntervalSince1970: TimeInterval(data.dt)))
-//
-//                            if !uniqueDates.contains(formattedDate) {
-//                                uniqueDates.append(formattedDate)
-//                                self.mode.append(data)
-//                                let newObject = ObjectWeatherSeveralDay()
-//                                newObject.day = data.dt
-//                                newObject.averTemp = Int(data.main.temp)
-//                                newObject.maxTemp = Int(data.main.temp_max)
-//                                newObject.minTemp = Int(data.main.temp_min)
-//                                self.severalDay.append(newObject)
-//                                self.resultWeather.weather.append(newObject)
-//                                self.alamTableView.reloadData()
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//    }
     
+    func updateSeveralDay(){
+        LoderAlamofire.parsingSeveralDay { json in
+            DispatchQueue.main.async {
+                var uniqueDates: [String] = []
+                var mode:[FeatherData] = []
+                let dateFormat = DateFormatter()
+                dateFormat.dateFormat = "MM/dd/yyyy"
+                json.list.forEach { (data) in
+                    let formattedDate = dateFormat.string(from: Date(timeIntervalSince1970: TimeInterval(data.dt)))
+                    
+                    if !uniqueDates.contains(formattedDate) {
+                        uniqueDates.append(formattedDate)
+                        mode.append(data)
+                        
+                        let newObject = ObjectWeatherSeveralDay()
+                        newObject.day = data.dt
+                        newObject.averTemp = Int(data.main.temp)
+                        newObject.maxTemp = Int(data.main.temp_max)
+                        newObject.minTemp = Int(data.main.temp_min)
+                        self.severalDay.append(newObject)
+                        self.resultWeather.weather.append(newObject)
+                        
+                        WRManager.sharedInstance.addData(object: self.resultWeather)
+                    }
+                    self.alamTableView.reloadData()
+                }
+            }
+        }
+    }
 }
 
-//extension WeatherViewController: UITableViewDataSource, UITableViewDelegate {
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 126
-//    }
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return severalDay.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "AlamofireTableViewCell", for: indexPath) as! AlamofireTableViewCell
-//        let database = WRManager.sharedInstance.getDataFromDB()
-//
-//        let localDateFormat = DateFormatter()
-//        localDateFormat.dateFormat = "dd.MM"
-//
-//        if database.isEmpty {
-//
-//            WRManager.sharedInstance.addData(object: self.severalDay)
-//        } else {
-//            for base in database {
-//           let date = Date(timeIntervalSince1970: TimeInterval(base.weather.first!.day))
-//                cell.dateLabel.text = localDateFormat.string(from: date)
-//                cell.averTempLabel.text = (base.weather.first?.averTemp.description)! + "ºC"
-//                cell.minTempLabel.text = (base.weather.first?.minTemp.description)! + "ºC"
-//                cell.maxTempLabel.text = (base.weather.first?.maxTemp.description)! + "ºC"
-//            }
-//            WRManager.sharedInstance.updateAddData(object: self.severalDay)
-//        }
-//        return cell
-//    }
-//}
+extension WeatherViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 126
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return WRManager.sharedInstance.getDataFromDB().count //severalDay.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AlamofireTableViewCell", for: indexPath) as! AlamofireTableViewCell
+        let database = WRManager.sharedInstance.getDataFromDB()
+        
+        let localDateFormat = DateFormatter()
+        localDateFormat.dateFormat = "dd.MM"
+        
+        if database.isEmpty {
+            updateSeveralDay()
+            
+        } else {
+            for base in database {
+                let date = Date(timeIntervalSince1970: TimeInterval(base.weather.first!.day))
+                cell.dateLabel.text = localDateFormat.string(from: date)
+                cell.averTempLabel.text = (base.weather.first?.averTemp.description)! + "ºC"
+                cell.minTempLabel.text = (base.weather.first?.minTemp.description)! + "ºC"
+                cell.maxTempLabel.text = (base.weather.first?.maxTemp.description)! + "ºC"
+            }
+            updateSeveralDay()
+            
+        }
+        return cell
+    }
+}

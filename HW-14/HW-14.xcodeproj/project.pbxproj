@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BF22ECF62617838B004800F7 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22ECF52617838B004800F7 /* RealmModel.swift */; };
+		BF3BE32D261E3A84000015D8 /* LoderAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BE32C261E3A84000015D8 /* LoderAlamofire.swift */; };
 		BF867BDE26171B16003D7FDF /* RealManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF867BDD26171B16003D7FDF /* RealManager.swift */; };
 		BF8751F526088A6100C52F00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8751F426088A6100C52F00 /* AppDelegate.swift */; };
 		BF8751F726088A6100C52F00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8751F626088A6100C52F00 /* SceneDelegate.swift */; };
@@ -35,6 +36,7 @@
 		3A7DB93C17EB29E282974E24 /* Pods_HW_14.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HW_14.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2A9B97E9B96BEF541805B3 /* Pods-HW-14.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW-14.debug.xcconfig"; path = "Target Support Files/Pods-HW-14/Pods-HW-14.debug.xcconfig"; sourceTree = "<group>"; };
 		BF22ECF52617838B004800F7 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		BF3BE32C261E3A84000015D8 /* LoderAlamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoderAlamofire.swift; sourceTree = "<group>"; };
 		BF867BDD26171B16003D7FDF /* RealManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealManager.swift; sourceTree = "<group>"; };
 		BF8751F126088A6100C52F00 /* HW-14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW-14.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8751F426088A6100C52F00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				BF875270260BB40400C52F00 /* ModelWeather.swift */,
 				BF875276260BBC4100C52F00 /* OneDayModel.swift */,
 				BF87526A260BA9D800C52F00 /* WeatherViewController.swift */,
+				BF3BE32C261E3A84000015D8 /* LoderAlamofire.swift */,
 				BFF6BFD72618CFC7009D50D1 /* WRModel.swift */,
 				BFF6BFDB2618D022009D50D1 /* WRManager.swift */,
 				BF875273260BB4F500C52F00 /* AlamofireTableViewCell.swift */,
@@ -284,6 +287,7 @@
 			files = (
 				BFF6BFD82618CFC7009D50D1 /* WRModel.swift in Sources */,
 				BF87520E2608A97A00C52F00 /* RealmViewController.swift in Sources */,
+				BF3BE32D261E3A84000015D8 /* LoderAlamofire.swift in Sources */,
 				BF87526B260BA9D800C52F00 /* WeatherViewController.swift in Sources */,
 				BF875274260BB4F500C52F00 /* AlamofireTableViewCell.swift in Sources */,
 				BF87521B2609EC7600C52F00 /* TaskViewCell.swift in Sources */,

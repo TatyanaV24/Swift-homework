@@ -19,42 +19,21 @@ class WRManager {
     }
     func addDataOneDay(object: ObjectWeatherDay) { // запись в БД на один день
         try! realm.write {
-            realm.add(object)
+            realm.add(object, update: .all)
             print("Added new object")
         }
     }
-        func updateAddOneDay(object: ObjectWeatherDay) {  // перзапись в БД на один день
-            try! realm.write {
-                realm.add(object, update: .all)
-                print("Update object")
-            }
-        }
+
     
     func getDataFromDB() -> Results<ObjectWS> {
         let results: Results<ObjectWS> = realm.objects(ObjectWS.self)
         return results
     }
         
-    func addData(object: [ObjectWeatherSeveralDay]) {
+    func addData(object: ObjectWS) {
         try! realm.write {
-            realm.add(object)
-            print("Added new object")
+            realm.add(object, update: .all)
+            print("Added new next object")
         }
     }
-    
-    func updateAddData(object: [ObjectWeatherSeveralDay]) {
-        try! realm.write {
-            realm.add(object)
-            print("Update object")
-        }
-    }
-
-    func deleteFromDb(object: ObjectWeatherDay) {
-        try! realm.write {
-            realm.delete(object)
-        }
-    }
-    
-    
-    
 }
