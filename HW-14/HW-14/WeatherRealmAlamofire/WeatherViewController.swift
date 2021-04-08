@@ -22,13 +22,15 @@ class WeatherViewController: UIViewController {
     var mode:[FeatherData] = []
     var severalDay:[ObjectWeatherSeveralDay] = []
     var resultWeather = ObjectWS()
-    
+
+    let databaseSeveral = WRManager.sharedInstance.getDataFromDB()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         alamTableView.delegate = self
         alamTableView.dataSource = self
+        
         let database = WRManager.sharedInstance.getDataFromDBOneDay()
         if database.isEmpty {                                          // если бд пустая
             updateOneDay()                                             // записываем данные в бд
@@ -42,6 +44,7 @@ class WeatherViewController: UIViewController {
             }
             updateOneDay()  // обновляем и перезаписываем данные в бд
         }
+        updateSeveralDay()
     }
     
     func updateOneDay(){
@@ -61,10 +64,11 @@ class WeatherViewController: UIViewController {
     }
     
     func updateSeveralDay(){
+        
+        if databaseSeveral.isEmpty {
         LoderAlamofire.parsingSeveralDay { json in
-            DispatchQueue.main.async {
+           
                 var uniqueDates: [String] = []
-                var mode:[FeatherData] = []
                 let dateFormat = DateFormatter()
                 dateFormat.dateFormat = "MM/dd/yyyy"
                 json.list.forEach { (data) in
@@ -72,25 +76,37 @@ class WeatherViewController: UIViewController {
                     
                     if !uniqueDates.contains(formattedDate) {
                         uniqueDates.append(formattedDate)
-                        mode.append(data)
+                        self.mode.append(data)
                         
-                        let newObject = ObjectWeatherSeveralDay()
-                        newObject.day = data.dt
-                        newObject.averTemp = Int(data.main.temp)
-                        newObject.maxTemp = Int(data.main.temp_max)
-                        newObject.minTemp = Int(data.main.temp_min)
-                        self.severalDay.append(newObject)
-                        self.resultWeather.weather.append(newObject)
+//                        var mode:[FeatherData] = []
+//                        var severalDay:[ObjectWeatherSeveralDay] = []
+//                        var resultWeather = ObjectWS()
                         
-                        WRManager.sharedInstance.addData(object: self.resultWeather)
-                    }
+                        for new in self.mode {
+                            let newCategory = ObjectWeatherSeveralDay()
+                            newCategory.day = new.dt
+                            newCategory.averTemp = Int(new.main.temp)
+                            newCategory.maxTemp = Int(new.main.temp_max)
+                            newCategory.minTemp = Int(new.main.temp_min)
+                            self.severalDay.append(newCategory)
+                            self.resultWeather.weather.append(newCategory)
+                            let hy = self.resultWeather.weather
+//                            print("новое \(self.severalDay)")
+                            for wf in self.resultWeather.weather {
+                                self.resultWeather.weather.append(wf)
+//                                WRManager.sharedInstance.addData(object: self.resultWeather)
+                                print("новое \(self.resultWeather)")
+                            }
+                        }
+                        }
+//                    resultWeather = WRManager.sharedInstance.getDataFromDB()
                     self.alamTableView.reloadData()
                 }
-            }
+            
         }
     }
 }
-
+}
 extension WeatherViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -104,25 +120,33 @@ extension WeatherViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "AlamofireTableViewCell", for: indexPath) as! AlamofireTableViewCell
-        let database = WRManager.sharedInstance.getDataFromDB()
+        let opt = databaseSeveral[indexPath.row]
         
         let localDateFormat = DateFormatter()
         localDateFormat.dateFormat = "dd.MM"
         
-        if database.isEmpty {
-            updateSeveralDay()
-            
-        } else {
-            for base in database {
-                let date = Date(timeIntervalSince1970: TimeInterval(base.weather.first!.day))
-                cell.dateLabel.text = localDateFormat.string(from: date)
-                cell.averTempLabel.text = (base.weather.first?.averTemp.description)! + "ºC"
-                cell.minTempLabel.text = (base.weather.first?.minTemp.description)! + "ºC"
-                cell.maxTempLabel.text = (base.weather.first?.maxTemp.description)! + "ºC"
-            }
-            updateSeveralDay()
-            
-        }
+        let date = Date(timeIntervalSince1970: TimeInterval(opt.weather.first!.day))
+        cell.dateLabel.text = localDateFormat.string(from: date)
+        cell.averTempLabel.text = (opt.weather.first?.averTemp.description)! + "ºC"
+        cell.minTempLabel.text = (opt.weather.first?.minTemp.description)! + "ºC"
+        cell.maxTempLabel.text = (opt.weather.first?.maxTemp.description)! + "ºC"
         return cell
     }
 }
+
+
+//func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "AlamofireTableViewCell", for: indexPath) as! AlamofireTableViewCell
+//        let opt = mode[indexPath.row]
+//        let date = Date(timeIntervalSince1970: TimeInterval(opt.dt))
+//        let localDateFormat = DateFormatter()
+//        localDateFormat.dateFormat = "dd.MM"
+//        cell.dateLabel.text = localDateFormat.string(from: date)
+//        cell.averTempLabel.text = opt.main.temp.description + "ºC"
+//        cell.minTempLabel.text = opt.main.temp_min.description + "ºC"
+//        cell.maxTempLabel.text = opt.main.temp_max.description + "ºC"
+//        return cell
+//    }
+
+
