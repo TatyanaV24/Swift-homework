@@ -28,7 +28,12 @@ class ObjectWeatherSeveralDay: Object {
     @objc dynamic var averTemp = 0
     @objc dynamic var minTemp = 0
     @objc dynamic var maxTemp = 0
+    @objc dynamic var id = 1
+
+    override class func primaryKey() -> String {
+            return "id"
     
+}
 }
 
 class ObjectWS: Object {

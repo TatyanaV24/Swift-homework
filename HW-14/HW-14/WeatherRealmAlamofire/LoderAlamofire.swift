@@ -17,6 +17,7 @@ class LoderAlamofire{
             if let result = response.value {
                 let object = result
                 print("мои \(object)")
+                completion(object)
             }
         }
     }
